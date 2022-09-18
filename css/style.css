@@ -2510,10 +2510,18 @@ footer p {
 
 footer .contact-us ul {
   flex-direction: row;
+  justify-content: end;
 }
 
 .logo-footer img{
   width: 100px;
+}
+
+footer .contact-us ul .media {
+  display: flex;
+  /* justify-content: center; */
+  /* align-items: center; */
+  gap: 15px;
 }
 
 @media (max-width : 998px) {
@@ -2537,9 +2545,7 @@ footer .contact-us ul {
     flex-direction: column-reverse;
   }
   footer .contact-us ul .media {
-    display: flex;
     justify-content: center;
     align-items: center;
-    gap: 15px;
   }
 }
