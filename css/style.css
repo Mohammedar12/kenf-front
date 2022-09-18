@@ -247,6 +247,10 @@ ul {
   font-size: 18px;
 }
 
+.btm-nav .desktop-list {
+  padding: 0 !important;
+}
+
 .btm-nav .desktop-list .group:hover {
   transform: scale(1.05);
   -webkit-transform: scale(1.05);
