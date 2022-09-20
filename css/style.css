@@ -305,7 +305,8 @@ ul {
 }
 
 .accordion-item {
-  border: 0;
+  border: 0 !important;
+  outline: 0 !important;
 }
 
 .accordion-button {
@@ -318,7 +319,7 @@ ul {
   color: #212529;
   text-align: center;
   background-color: #fff;
-  border: 0;
+  border: 0 !important;
   border-radius: 0;
   overflow-anchor: none;
   outline: 0 !important;
@@ -340,18 +341,18 @@ ul {
 }
 
 @media (max-width: 330px) {
-  .accordion-button {
+  .menu-mob .accordion-button {
     font-size: 0.85rem;
   }
-  .accordion-item h5 {
+  .menu-mob .accordion-item h5 {
     font-size: 1rem !important;
   }
-  .accordion-item li {
+  .menu-mob .accordion-item li {
     font-size: 0.7rem !important;
   }
 }
 
-.accordion-button:not(.collapsed) {
+.menu-mob .accordion-button:not(.collapsed) {
   color: var(--main-color);
   background-color: #f8f4f4 !important;
   box-shadow: var(--main-shadow);
@@ -493,11 +494,11 @@ ul {
   width: max-content;
   position: relative;
   overflow: hidden;
-  border-radius: 7px;
-  -webkit-border-radius: 7px;
-  -moz-border-radius: 7px;
-  -ms-border-radius: 7px;
-  -o-border-radius: 7px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
 
 .group_2 a h4 {
@@ -520,11 +521,16 @@ ul {
   width: 370px;
   max-width: 100%;
   height: 80px;
+  border-radius: 10px;
   transition: var(--transition);
   -webkit-transition: var(--transition);
   -moz-transition: var(--transition);
   -ms-transition: var(--transition);
   -o-transition: var(--transition);
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
 
 @media (max-width: 395px) {
@@ -1142,6 +1148,7 @@ ul {
 .sorting .box {
   gap: 60px;
 }
+
 .sorting .box .sort button,
 .sorting .box .filter button {
   display: flex;
@@ -1157,10 +1164,45 @@ ul {
   outline: none;
 }
 
+@media (max-width: 450px) {
+  .sorting {
+    width: 300px;
+  }
+  .sorting .box .sort button,
+  .sorting .box .filter button {
+    gap: 20px;
+    font-size: 16px;
+  }
+  .sorting .box .sort .list ,
+  .sorting .box .filter .check-list {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 330px) {
+  .sorting {
+    
+    width: 280px;
+  }
+  .sorting .box img {
+    width: 15px;
+  }
+  .sorting .box .sort button,
+  .sorting .box .filter button {
+    gap: 15px;
+    font-size: 15px;
+  }
+  .sorting .box .sort .list ,
+  .sorting .box .filter .check-list {
+    font-size: 14px;
+  }
+}
+
+
 .sorting .box .list {
   position: absolute;
   width: 100%;
-  left: 10px;
+  left: 0px;
   top: 40px;
   background-color: #fff;
   border: 1px solid #ccc;
@@ -1181,7 +1223,9 @@ ul {
 }
 
 .sorting .box .sort button:focus + .list,
-.sorting .box .sort button:hover + .list {
+.sorting .box .sort:hover button + .list,
+.sorting .box .filter button:focus + .list,
+.sorting .box .filter:hover button + .list {
   z-index: 99;
   opacity: 1;
 }
@@ -1192,6 +1236,42 @@ ul {
   justify-content: space-between;
   gap: 30px;
   padding: 5px 0;
+}
+
+.sorting .box .list .accordion,
+button {
+  width: 100%;
+}
+
+.sorting .box .filter .list button {
+  background-color: var(--sec-color);
+  margin: 10px 0;
+  padding: 10px 20px;
+}
+
+.sorting .box .filter .list button::after {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.sorting .box .filter .list .accordion-button:not(.collapsed)::after {
+  background-image: url(../images/angle-down.svg) !important;
+  transform: rotate(-180deg);
+  -webkit-transform: rotate(-180deg);
+  -moz-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  -o-transform: rotate(-180deg);
+}
+
+.sorting .box .filter .list .check-list {
+  padding: 0 20px;
+  width: 100%;
+}
+
+.sorting .box .filter .list .check-list .check-item {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
 }
 
 /* product-section */
