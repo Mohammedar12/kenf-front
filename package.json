@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "@splidejs/splide": "^4.0.17",
+    "intl-tel-input": "^17.0.19",
     "jquery": "^3.6.1"
   }
 }

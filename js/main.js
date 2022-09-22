@@ -1,43 +1,87 @@
-// menu mob
-
 let menuBar = document.querySelector(".menu-bar");
 let menuList = document.querySelector(".menu-mob");
 
-menuBar.onclick = function () {
-  if (menuList.classList.contains("menu-mob-hide")) {
-    menuList.classList.replace("menu-mob-hide", "menu-mob-show");
-  } else {
-    menuList.classList.replace("menu-mob-show", "menu-mob-hide");
-  }
-};
+// transBg this to close menu and search bar
 
-// document.addEventListener("DOMContentLoaded", function () {
-//   var stream = document.querySelector(".gallery__stream");
-//   var items = document.querySelectorAll(".gallery__item");
-//   var timeChange = 7000;
+let transBg = document.createElement("div");
+transBg.className = "trans-bg";
+transBg.innerHTML = "";
+document.body.appendChild(transBg);
 
-//   var prev = document.querySelector(".gallery__prev");
-//   prev.addEventListener("click", function () {
-//     stream.insertBefore(items[items.length - 1], items[0]);
-//     items = document.querySelectorAll(".gallery__item");
-//   });
+menuBar.addEventListener("click", (e) => {
+  menuList.classList.add("menu-mob-show");
+  transBg.style.display = "block";
+});
+transBg.addEventListener("click", (e) => {
+  menuList.classList.remove("menu-mob-show");
+  transBg.style.display = "none";
+});
 
-//   let timeGallery = setInterval(function () {
-//     var next = document.querySelector(".gallery__next");
-//     stream.appendChild(items[0]);
-//     items = document.querySelectorAll(".gallery__item");
-//   }, timeChange);
+// search box
 
-//   var next = document.querySelector(".gallery__next");
-//   next.addEventListener("click", function () {
-//     stream.appendChild(items[0]);
-//     items = document.querySelectorAll(".gallery__item");
-//   });
-// });
+let searchBox = document.querySelector(".search-box");
+let searchInput = document.querySelector(".search");
 
-let scrollCenter = document.querySelector(".scroll-bar-center");
-let innerDiv = document.querySelector(".scroll-bar-center > imgs");
+searchBox.addEventListener("click", (e) => {
+  searchInput.classList.add("focused");
+  transBg.style.display = "block";
+});
 
-scrollCenter.scrollLeft((innerDiv.width() - scrollCenter.width()) / 2);
+transBg.addEventListener("click", (e) => {
+  searchInput.classList.remove("focused");
+  transBg.style.display = "none";
+});
 
+// login madal
+
+let loginModal = document.querySelector("#staticBackdrop");
+let loginTitle = document.querySelector(".login-title");
+let fieldEmail = document.querySelector(".field-email");
+let fieldPhone = document.querySelector(".field-phone");
+let modalFooter = document.querySelector(".modal-footer");
+let countryCodes = document.querySelector(".iti--allow-dropdown ");
+let verificationeMail = document.querySelector(".verification-email");
+let verificationePhone = document.querySelector(".verification-phone");
+
+function showEmail() {
+  loginTitle.classList.add("hide-this");
+  fieldEmail.classList.add("show-this-block");
+  modalFooter.classList.add("hide-this");
+}
+
+function showPhone() {
+  loginTitle.classList.add("hide-this");
+  fieldPhone.classList.add("show-this-block");
+  modalFooter.classList.add("hide-this");
+}
+
+function showEmailCode() {
+  verificationeMail.classList.add("show-this-flex");
+}
+
+function showPhoneCode() {
+  verificationePhone.classList.add("show-this-flex");
+}
+
+function restAll() {
+  loginTitle.classList.remove("hide-this");
+  fieldEmail.classList.remove("show-this-block");
+  fieldPhone.classList.remove("show-this-block");
+  modalFooter.classList.remove("hide-this");
+  verificationeMail.classList.remove("show-this-flex");
+  verificationePhone.classList.remove("show-this-flex");
+}
+
+// country codes 
+
+$(function() {
+  $("#country").change(function() {
+    let countryCode = $(this).find('option:selected').data('country-code');
+    let value = "+" + $(this).val();
+    $('#txtPhone').val(value).intlTelInput("setCountry", countryCode);
+  });
+  
+  var code = "+966";
+  $('#txtPhone').val(code).intlTelInput();
+});
 

@@ -18,6 +18,9 @@
     <link rel="stylesheet" href="../OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="../OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
 
+    <!-- intl Tel Input -->
+    <link rel="stylesheet" href="../node_modules/intl-tel-input/build/css/intlTelInput.css" />
+
     <!-- CSS Main -->
     <link rel="stylesheet" href="../css/style.css">
 
@@ -42,8 +45,9 @@
                                 <div class=" user position-relative">
                                         <i class="fa-solid fa-user user-icon fa-1x p-md-2 p-sm-1""></i>
                                     <ul class=" user-list flex-column position-absolute gap-2">
-                                            <li><a href="">Login</a></li>
-                                            <li><a href="">Sign up </a></li>
+                                            <li><button onclick="restAll()" type="button" class="btn shadow-none p-0"
+                                                    data-bs-toggle="modal"
+                                                    data-bs-target="#staticBackdrop">Login</button></li>
                                             <li><a href="">My profile</a></li>
                                             <li><a href="orders.html">My orders</a></li>
                                             <li><a href="">Logout</a></li>
@@ -61,67 +65,20 @@
                                     <li class="en">EN</li>
                                 </ul>
                             </div>
-                            <i class="fa-solid fa-search fa-1x p-1"></i>
-                            <i class="menu-bar fa-solid fa-bars fa-1x  p-1"></i>
+                            <div tabindex="0" class=" search-box d-flex align-items-center ">
+                                <div tabindex="0" class=" search-box d-flex align-items-center ">
+                                    <i class="fa-solid fa-search fa-1x p-1"></i>
+                                    <input dir="rtl" class="search " type="search" name="" id="" placeholder="search">
+                                </div>
+                                <input dir="rtl" class="search " type="search" name="" id="" placeholder="search">
+                            </div>
+                            <i tabindex="0" class="menu-bar fa-solid fa-bars fa-1x  p-1"></i>
                         </div>
                     </div>
                 </nav>
             </div>
-
-
-            <nav class="btm-nav d-flex justify-content-center p-2 mt-1">
-                <div class="container d-flex justify-content-center">
-                    <ul class=" desktop-list d-flex align-items-center gap-5 fw-bold m-0 position-relative p-0">
-                        <div class="groups ps-2 pe-2">
-                            <li class="group gold-group"><a href="gold-gruop.html">Gold</a></li>
-                            <ul
-                                class="category category-gold d-flex text-center flex-column gap-1 align-items-center pt-2">
-                                <h5 class="fw-bold">Gold</h5>
-                                <div class="links d-flex gap-3">
-                                    <li><a href="category-page.html">Rings</a></li>
-                                    <li><a href="category-page.html">Bracelets</a></li>
-                                    <li><a href="category-page.html">Earrings</a></li>
-                                    <li><a href="category-page.html">Necklaces </a></li>
-                                    <li><a href="category-page.html">Chains</a></li>
-                                    <li><a href="category-page.html">Anklets</a></li>
-                                    <li><a href="category-page.html">Sets</a></li>
-                                </div>
-                            </ul>
-                        </div>
-                        <div class="groups ps-2 pe-2">
-                            <li class="group silver-group"><a href="silver-gruop.html">Silver</a></li>
-                            <ul class="category category-silver d-flex flex-column gap-1 align-items-center pt-2">
-                                <h5 class="fw-bold">Silver</h5>
-                                <div class="links d-flex gap-3">
-                                    <li><a href="category-page.html">Rings</a></li>
-                                    <li><a href="category-page.html">Bracelets</a></li>
-                                    <li><a href="category-page.html">Earrings</a></li>
-                                    <li><a href="category-page.html">Necklaces </a></li>
-                                    <li><a href="category-page.html">Chains</a></li>
-                                    <li><a href="category-page.html">Anklets</a></li>
-                                    <li><a href="category-page.html">Sets</a></li>
-                                </div>
-                            </ul>
-                        </div>
-                        <div class="groups ps-2 pe-2">
-                            <li class="group daimond-group"><a href="daimond-gruop.html">Diamonds</a></li>
-                            <ul class="category category-daimond d-flex flex-column gap-1 align-items-center pt-2">
-                                <h5 class="fw-bold">Diamonds</h5>
-                                <div class="links d-flex gap-3">
-                                    <li><a href="category-page.html">Rings</a></li>
-                                    <li><a href="category-page.html">Bracelets</a></li>
-                                    <li><a href="category-page.html">Earrings</a></li>
-                                    <li><a href="category-page.html">Necklaces </a></li>
-                                    <li><a href="category-page.html">Chains</a></li>
-                                    <li><a href="category-page.html">Anklets</a></li>
-                                    <li><a href="category-page.html">Sets</a></li>
-                                </div>
-                            </ul>
-                        </div>
-                    </ul>
-                </div>
-            </nav>
-            <div dir="rtl" class=" menu-mob menu-mob-hide accordion accordion-flush" id="accordionFlushExample">
+            <!-- mobail menu -->
+            <div dir="rtl" class=" menu-mob accordion accordion-flush" id="accordionFlushExample">
                 <div class="accordion-item">
                     <h2 class=" text-center accordion-header" id="flush-headingOne">
                         <button class="group gold-group accordion-button collapsed" type="button"
@@ -214,161 +171,308 @@
                     </div>
                 </div>
             </div>
-        </nav>
-    </div>
+            <nav class="btm-nav d-flex justify-content-center p-2 mt-1">
+                <div class="container d-flex justify-content-center">
+                    <ul class=" desktop-list d-flex align-items-center gap-5 fw-bold m-0 position-relative p-0">
+                        <div class="groups ps-2 pe-2">
+                            <li class="group gold-group"><a href="gold-gruop.html">Gold</a></li>
+                            <ul
+                                class="category category-gold d-flex text-center flex-column gap-1 align-items-center pt-2">
+                                <h5 class="fw-bold">Gold</h5>
+                                <div class="links d-flex gap-3">
+                                    <li><a href="category-page.html">Rings</a></li>
+                                    <li><a href="category-page.html">Bracelets</a></li>
+                                    <li><a href="category-page.html">Earrings</a></li>
+                                    <li><a href="category-page.html">Necklaces </a></li>
+                                    <li><a href="category-page.html">Chains</a></li>
+                                    <li><a href="category-page.html">Anklets</a></li>
+                                    <li><a href="category-page.html">Sets</a></li>
+                                </div>
+                            </ul>
+                        </div>
+                        <div class="groups ps-2 pe-2">
+                            <li class="group silver-group"><a href="silver-gruop.html">Silver</a></li>
+                            <ul class="category category-silver d-flex flex-column gap-1 align-items-center pt-2">
+                                <h5 class="fw-bold">Silver</h5>
+                                <div class="links d-flex gap-3">
+                                    <li><a href="category-page.html">Rings</a></li>
+                                    <li><a href="category-page.html">Bracelets</a></li>
+                                    <li><a href="category-page.html">Earrings</a></li>
+                                    <li><a href="category-page.html">Necklaces </a></li>
+                                    <li><a href="category-page.html">Chains</a></li>
+                                    <li><a href="category-page.html">Anklets</a></li>
+                                    <li><a href="category-page.html">Sets</a></li>
+                                </div>
+                            </ul>
+                        </div>
+                        <div class="groups ps-2 pe-2">
+                            <li class="group daimond-group"><a href="daimond-gruop.html">Diamonds</a></li>
+                            <ul class="category category-daimond d-flex flex-column gap-1 align-items-center pt-2">
+                                <h5 class="fw-bold">Diamonds</h5>
+                                <div class="links d-flex gap-3">
+                                    <li><a href="category-page.html">Rings</a></li>
+                                    <li><a href="category-page.html">Bracelets</a></li>
+                                    <li><a href="category-page.html">Earrings</a></li>
+                                    <li><a href="category-page.html">Necklaces </a></li>
+                                    <li><a href="category-page.html">Chains</a></li>
+                                    <li><a href="category-page.html">Anklets</a></li>
+                                    <li><a href="category-page.html">Sets</a></li>
+                                </div>
+                            </ul>
+                        </div>
+                    </ul>
+                </div>
+            </nav>
+            <!-- Modal Login -->
+            <div class="login-modal modal fade " id="staticBackdrop" data-bs-keyboard="false" tabindex="-1"
+                aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered m-auto">
+                    <div class="modal-content">
+                        <div class="modal-header align-items-start border-0 pb-0">
+                            <h5 class="modal-titled d-flex flex-column  align-items-center text-center w-100"
+                                id="staticBackdropLabel">
+                                <img class="m-3" src="../images/logo-3.svg" alt="" width="100px">
+                                <!-- Log in -->
+                            </h5>
+                        </div>
+                        <div class="modal-body border-0 p-0 pb-3">
 
-    <!-- banners -->
-    <section class="banners carousell pb-4">
-        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true ">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                    aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                    aria-label="Slide 3"></button>
+                            <!-- this will show before select the way -->
+                            <span class="login-title text-center d-block">Choese Way To login</span>
+
+                            <!-- email way -->
+                            <form action="" class="field-email d-none">
+                                <!-- Email input -->
+                                <div
+                                    class="email-input d-flex flex-column align-items-end pe-3 ps-3  m-2 position-relative">
+                                    <label for="email">* Email</label>
+                                    <input dir="rtl" class="w-100 ps-5 pe-2 p-1 mt-1 rounded-1" type="text" id="email"
+                                        placeholder="Email" required style="border:1px solid #ccc ;">
+                                    <i class="fa-solid fa-envelope p-1 position-absolute"
+                                        style="top: 33.3px; left: 20px;"></i>
+                                </div>
+
+                                <!-- verification input -->
+
+                                <div class="verification-email d-flex flex-column
+                                 align-items-end pe-3 ps-3 m-2 position-relative d-none">
+                                    <label for="email">* Verification code</label>
+                                    <input dir="rtl" class="w-100 ps-5 pe-2 p-1 mt-1" type="text" id="email"
+                                        placeholder="Enter verification code" maxlength="4" required
+                                        style="border:1px solid #ccc ;">
+                                </div>
+
+                                <!-- submit -->
+
+                                <div class="submit w-100  text-center pe-4 ps-4">
+                                    <button type="button" class="btn  w-100 shadow-none text-light mt-2"
+                                        style="background-color: var(--main-color) ;" onclick="showEmailCode()">
+                                        Go</button>
+                                </div>
+                            </form>
+
+                            <!-- phone way -->
+                            <form action="" class="field-phone d-none">
+
+                                <!-- Phone input -->
+
+                                <div
+                                    class="phone-input d-flex flex-column align-items-end pe-3 ps-3  m-2 position-relative">
+                                    <label for="">* phone</label>
+                                    <input class="txtBox w-100 ps-5 pe-2 p-1 mt-1 rounded-1" type="tel" id="txtPhone"
+                                        required style="border:1px solid #ccc ;">
+                                    <!-- <i class="fa-solid fa-mobile p-1 position-absolute"
+                                        style="top: 33.3px; left: 20px;"></i> -->
+                                </div>
+
+                                <!-- verification input -->
+
+                                <div class="verification-phone d-flex flex-column
+                                 align-items-end pe-3 ps-3 m-2 position-relative d-none">
+                                    <label for="phone">* Verification code</label>
+                                    <input dir="rtl" class="w-100 ps-5 pe-2 p-1 mt-1" type="text" id="phone"
+                                        placeholder="Enter verification code" maxlength="4" required
+                                        style="border:1px solid #ccc ;">
+                                </div>
+
+                                <!-- submit -->
+
+                                <div class="submit w-100  text-center pe-4 ps-4">
+                                    <button type="button" class="btn  w-100 shadow-none text-light mt-2"
+                                        style="background-color: var(--main-color) ;" onclick="showPhoneCode()">
+                                        Go</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer justify-content-center ">
+                            <button type="button" class="btn email" onclick="showEmail()">
+                                Email
+                                <i class="fa-solid fa-envelope p-1"></i>
+                            </button>
+                            <button type="button" class="btn phone" onclick="showPhone()">
+                                Phone
+                                <i class=" fa-solid fa-mobile p-1"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="../images/بنر رئيسي 1.png" class="d-block img-fluid banners-descktop" alt="...">
-                    <img src="../images/bannn mob 1.png" class="d-block img-fluid banners-mobail" alt="...">
+        </nav>
+
+
+        <!-- banners -->
+        <section class="banners carousell pb-4">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true ">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
                 </div>
-                <div class="carousel-item">
-                    <img src="../images/بنر ثاني 1.png" class="d-block img-fluid banners-descktop" alt="...">
-                    <img src="../images/bannn mob 2.png" class="d-block img-fluid banners-mobail" alt="...">
-                </div>
-                <!-- <div class="carousel-item">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="../images/بنر رئيسي 1.png" class="d-block img-fluid banners-descktop" alt="...">
+                        <img src="../images/bannn mob 1.png" class="d-block img-fluid banners-mobail" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../images/بنر ثاني 1.png" class="d-block img-fluid banners-descktop" alt="...">
+                        <img src="../images/bannn mob 2.png" class="d-block img-fluid banners-mobail" alt="...">
+                    </div>
+                    <!-- <div class="carousel-item">
                         <img src="../images/" class="d-block w-100" alt="...">
                     </div> -->
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
-    </section>
-
-    <!-- category -->
-    <section class="group-section pt-3 pb-3">
-        <div class="group_2 d-flex justify-content-center flex-wrap gap-4">
-            <a class="col-md-3 col-sm-1  d-block" href="daimond-gruop.html">
-                <h4>Diamonds</h4>
-                <img class="" src="../images/cate-1.png" alt="">
-            </a>
-            <a class=" col-md-3 col-sm-1  d-block" href="gold-gruop.html">
-                <h4>Gold </h4>
-                <img src="../images/cate-2.png" alt="">
-            </a>
-            <a class=" col-md-3 col-sm-1 d-block" href="silver-gruop.html">
-                <h4>Silver</h4>
-                <img src="../images/cate-3.png" alt="">
-            </a>
-        </div>
-    </section>
-
-    <!-- exclusive -->
-    <section class="exclusive pt-md-3 pb-md-3 pt-1 pb-1 position-relative ">
-        <h3 class="section-title">Exclusive Products</h3>
-        <div class="exclusive-carousel owl-carousel owl-theme ">
-            <div class="item">
-                <a href="#" class="slide  ">
-                    <div class="content">
-                        <img src="../images/ex-2.png" alt="img">
-                        <div class="info">
-                            <h4 class="title-product">ring Diamonds</h4>
-                            <span class="price-product">5399 ر.س </span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="item">
-                <a href="#" class="slide ">
-                    <div class="content">
-                        <img src="../images/ex-1.png" alt="img">
-                        <div class="info">
-                            <h4 class="title-product">Necklaces Diamonds</h4>
-                            <span class="price-product">9399 ر.س </span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="item">
-                <a href="#" class="slide ">
-                    <div class="content">
-                        <img src="../images/ex-1.png" alt="img">
-                        <div class="info">
-                            <h4 class="title-product">Necklaces Diamonds</h4>
-                            <span class="price-product">9399 ر.س </span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- banner -->
-    <section class="small-banner pt-md-5 pt-3 pb-3">
-        <div class="container-fluid p-0">
-            <div class="banner">
-                <img class="banners-descktop pe-md-5 ps-md-5 pe-sm-1 ps-sm-1 " src="../images/small-banner.png" alt="">
-                <img class="banners-mobail " src="../images/small-banner-mob.png" alt="">
-            </div>
-        </div>
-    </section>
-
-    <!-- category_2 -->
-    <section class="category_2-section pt-3 pb-3">
-        <h3 class="section-title">Shop by category</h3>
-        <div class="category_2 pt-2">
-            <div class="container text-center">
-                <div class="rows row-1 pb-1">
-                    <a href="category-page.html" class="cate">
-                        <img src="../images/bracelets.png" alt="img">
-                        <h6 class="cate-title">أساور</h6>
-                    </a>
-
-                    <a href="category-page.html" class="cate">
-                        <img src="../images/earrings.png" alt="img">
-                        <h6 class="cate-title">أقراط</h6>
-                    </a>
-
-                    <a href="category-page.html" class="cate">
-                        <img src="../images/Chains.png" alt="img">
-                        <h6 class="cate-title">Chains</h6>
-                    </a>
-
-                    <a href="category-page.html" class="cate">
-                        <img src="../images/rings.png" alt="img">
-                        <h6 class="cate-title">Rings</h6>
-                    </a>
-
                 </div>
-                <div class="rows row-2 pt-1">
-                    <a href="category-page.html" class="cate">
-                        <img src="../images/Sets.png" alt="img">
-                        <h6 class="cate-title">Rings</h6>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- category -->
+        <section class="group-section pt-3 pb-3">
+            <div class="group_2 d-flex justify-content-center flex-wrap gap-4">
+                <a class="col-md-3 col-sm-1  d-block" href="daimond-gruop.html">
+                    <h4>Diamonds</h4>
+                    <img class="" src="../images/cate-1.png" alt="">
+                </a>
+                <a class=" col-md-3 col-sm-1  d-block" href="gold-gruop.html">
+                    <h4>Gold </h4>
+                    <img src="../images/cate-2.png" alt="">
+                </a>
+                <a class=" col-md-3 col-sm-1 d-block" href="silver-gruop.html">
+                    <h4>Silver</h4>
+                    <img src="../images/cate-3.png" alt="">
+                </a>
+            </div>
+        </section>
+
+        <!-- exclusive -->
+        <section class="exclusive pt-md-3 pb-md-3 pt-1 pb-1 position-relative ">
+            <h3 class="section-title">Exclusive Products</h3>
+            <div class="exclusive-carousel owl-carousel owl-theme ">
+                <div class="item">
+                    <a href="#" class="slide  ">
+                        <div class="content">
+                            <img src="../images/ex-2.png" alt="img">
+                            <div class="info">
+                                <h4 class="title-product">ring Diamonds</h4>
+                                <span class="price-product" dir="rtl">5945 ر.س</span>
+                            </div>
+                        </div>
                     </a>
-                    <a href="category-page.html" class="cate">
-                        <img src="../images/necles.png" alt="img">
-                        <h6 class="cate-title">Rings</h6>
+                </div>
+                <div class="item">
+                    <a href="#" class="slide ">
+                        <div class="content">
+                            <img src="../images/ex-1.png" alt="img">
+                            <div class="info">
+                                <h4 class="title-product">Necklaces Diamonds</h4>
+                                <span class="price-product" dir="rtl">9399 ر.س </span>
+                            </div>
+                        </div>
                     </a>
-                    <a href="category-page.html" class="cate">
-                        <img src="../images/Other Categories.png" alt="img">
-                        <h6 class="cate-title">Rings</h6>
+                </div>
+                <div class="item">
+                    <a href="#" class="slide ">
+                        <div class="content">
+                            <img src="../images/ex-1.png" alt="img">
+                            <div class="info">
+                                <h4 class="title-product">Necklaces Diamonds</h4>
+                                <span class="price-product" dir="rtl">9399 ر.س </span>
+                            </div>
+                        </div>
                     </a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- charts -->
-    <!-- <section class="charts-section pt-3 pb-3">
+        <!-- banner -->
+        <section class="small-banner pt-md-5 pt-3 pb-3">
+            <div class="container-fluid p-0">
+                <div class="banner">
+                    <img class="banners-descktop pe-md-5 ps-md-5 pe-sm-1 ps-sm-1 " src="../images/small-banner.png"
+                        alt="">
+                    <img class="banners-mobail " src="../images/small-banner-mob.png" alt="">
+                </div>
+            </div>
+        </section>
+
+        <!-- category_2 -->
+        <section class="category_2-section pt-3 pb-3">
+            <h3 class="section-title">Shop by category</h3>
+            <div class="category_2 pt-2">
+                <div class="container text-center">
+                    <div class="rows row-1 pb-1">
+                        <a href="category-page.html" class="cate">
+                            <img src="../images/bracelets.png" alt="img">
+                            <h6 class="cate-title">أساور</h6>
+                        </a>
+
+                        <a href="category-page.html" class="cate">
+                            <img src="../images/earrings.png" alt="img">
+                            <h6 class="cate-title">أقراط</h6>
+                        </a>
+
+                        <a href="category-page.html" class="cate">
+                            <img src="../images/Chains.png" alt="img">
+                            <h6 class="cate-title">Chains</h6>
+                        </a>
+
+                        <a href="category-page.html" class="cate">
+                            <img src="../images/rings.png" alt="img">
+                            <h6 class="cate-title">Rings</h6>
+                        </a>
+
+                    </div>
+                    <div class="rows row-2 pt-1">
+                        <a href="category-page.html" class="cate">
+                            <img src="../images/Sets.png" alt="img">
+                            <h6 class="cate-title">Rings</h6>
+                        </a>
+                        <a href="category-page.html" class="cate">
+                            <img src="../images/necles.png" alt="img">
+                            <h6 class="cate-title">Rings</h6>
+                        </a>
+                        <a href="category-page.html" class="cate">
+                            <img src="../images/Other Categories.png" alt="img">
+                            <h6 class="cate-title">Rings</h6>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- charts -->
+        <!-- <section class="charts-section pt-3 pb-3">
         <h3 class="section-title">سعر الGold </h3>
         <div class="chart-mob carousell d-none">
             <div id="charts" class="carousel slide" data-bs-ride="true ">
@@ -404,75 +508,82 @@
         </div>
     </section> -->
 
-    <!-- Kenf Products -->
-    <section class="kenf-products-section pt-3 pb-3">
-        <h3 class="section-title">Kenf’s Collection</h3>
-        <div class="kenf-products pt-2">
-            <div class="container scroll-bar-center">
-                <div class="imgs d-flex justify-content-center">
-                    <div class="img ">
-                        <a href=""><img src="../images/kenf-p-1.png" alt=""> </a>
-                    </div>
-                    <div class="img">
-                        <a href=""> <img src="../images/kenf-p-2.png" alt=""> </a>
-                    </div>
-                    <div class="img">
-                        <a href=""> <img src="../images/kenf-p-3.png" alt=""> </a>
-                    </div>
-                    <div class="img">
-                        <a href=""> <img src="../images/kenf-p-4.png" alt=""> </a>
+        <!-- Kenf Products -->
+        <section class="kenf-products-section pt-3 pb-3">
+            <h3 class="section-title">Kenf’s Collection</h3>
+            <div class="kenf-products pt-2">
+                <div class="container scroll-bar-center">
+                    <div class="items d-flex justify-content-center text-center">
+                        <div class="item ">
+                            <a href=""><img src="../images/kenf-p-1.png" alt=""> </a>
+                            <h5 class="item-title">Kenf-1</h5>
+                        </div>
+                        <div class="item">
+                            <a href=""> <img src="../images/kenf-p-2.png" alt=""> </a>
+                            <h5 class="item-title">Kenf-2</h5>
+                        </div>
+                        <div class="item">
+                            <a href=""> <img src="../images/kenf-p-3.png" alt=""> </a>
+                            <h5 class="item-title">Kenf-3</h5>
+                        </div>
+                        <div class="item">
+                            <a href=""> <img src="../images/kenf-p-4.png" alt=""> </a>
+                            <h5 class="item-title">Kenf-4</h5>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <footer>
-        <div class="container">
-            <div class="logo-footer">
-                <img src="../images/logo-2.svg" alt="logo">
+        </section>
+        <footer>
+            <div class="container">
+                <div class="logo-footer">
+                    <img src="../images/logo-2.svg" alt="logo">
+                </div>
+                <div class="contact-us">
+                    <h4 class="footer-title">Contact Us</h4>
+                    <ul>
+                        <div class="media ">
+                            <li><a href=""><i class="fa-brands fa-whatsapp"></i></a></li>
+                            <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                        </div>
+                        <li>support@kenf.sa</li>
+                    </ul>
+                </div>
+                <div class="important-links">
+                    <h4 class="footer-title">Important Links</h4>
+                    <ul>
+                        <li><a href="">Terms and Conditions</a></li>
+                        <li><a href="">Privacy Policy</a></li>
+                        <li><a href="">Shipping And Delivery</a></li>
+                        <li><a href="">Return And Exchange</a></li>
+                    </ul>
+                </div>
+                <div class="may-interest-you">
+                    <h4 class="footer-title">May Interest You</h4>
+                    <ul>
+                        <li><a href="">Products</a></li>
+                        <li><a href="">My Account</a></li>
+                        <li><a href="">Shopping Bag</a></li>
+                        <li><a href="">Size Guide</a></li>
+                        <li><a href="">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="us">
+                    <h4 class="footer-title">About Us</h4>
+                    <p>كنف منصة تجارة من اكبر المنصات بالشرق الاوسط </p>
+                </div>
             </div>
-            <div class="contact-us">
-                <h4 class="footer-title">Contact Us</h4>
-                <ul>
-                    <div class="media ">
-                        <li><a href=""><i class="fa-brands fa-whatsapp"></i></a></li>
-                        <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
-                    </div>
-                    <li>support@kenf.sa</li>
-                </ul>
-            </div>
-            <div class="important-links">
-                <h4 class="footer-title">Important Links</h4>
-                <ul>
-                    <li><a href="">Terms and Conditions</a></li>
-                    <li><a href="">Privacy Policy</a></li>
-                    <li><a href="">Shipping And Delivery</a></li>
-                    <li><a href="">Return And Exchange</a></li>
-                </ul>
-            </div>
-            <div class="may-interest-you">
-                <h4 class="footer-title">May Interest You</h4>
-                <ul>
-                    <li><a href="">Products</a></li>
-                    <li><a href="">My Account</a></li>
-                    <li><a href="">Shopping Bag</a></li>
-                    <li><a href="">Size Guide</a></li>
-                    <li><a href="">FAQs</a></li>
-                </ul>
-            </div>
-            <div class="us">
-                <h4 class="footer-title">About Us</h4>
-                <p>كنف منصة تجارة من اكبر المنصات بالشرق الاوسط </p>
-            </div>
-        </div>
-    </footer>
+        </footer>
     </div>
     <script src="../js/all.min.js"></script>
     <script src="../js/bootstrap.bundle.min.js"></script>
-    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="../node_modules/intl-tel-input/build/js/intlTelInput-jquery.min.js"></script>
     <script src="../OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
     <script src="../js/main.js"></script>
     <script src="../js/owlCarousel.js"></script>
+
 
 </body>
 
