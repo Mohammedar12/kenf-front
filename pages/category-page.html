@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="../css/bootstrap.min.css">
 
     <!-- intl Tel Input -->
-    <link rel="stylesheet" href="../node_modules/intl-tel-input/build/css/intlTelInput.css" />
+    <link rel="stylesheet" href="../intl-tel-input/build/css/intlTelInput.css" />
 
     <!-- CSS Main -->
     <link rel="stylesheet" href="../css/style.css">
@@ -41,14 +41,14 @@
                                 <div class=" user position-relative">
                                         <i class="fa-solid fa-user user-icon fa-1x p-md-2 p-sm-1""></i>
                                     <ul class=" user-list flex-column position-absolute gap-2">
-                                            <li><a href="">Login</a></li>
-                                            <li><a href="">Sign up</a></li>
+                                            <li><button onclick="restAll()" type="button" class="btn shadow-none p-0"
+                                                    data-bs-toggle="modal"
+                                                    data-bs-target="#staticBackdrop">Login</button></li>
                                             <li><a href="">My profile</a></li>
                                             <li><a href="orders.html">My orders</a></li>
                                             <li><a href="">Logout</a></li>
                                             </ul>
                             </div>
-
                         </div>
                         <div class="box logo">
                             <a href="index.html"><img class="img-fluid " src="../images/logo.svg" alt=""></a>
@@ -62,7 +62,10 @@
                                 </ul>
                             </div>
                             <div tabindex="0" class=" search-box d-flex align-items-center ">
-                                <i class="fa-solid fa-search fa-1x p-1"></i>
+                                <div tabindex="0" class=" search-box d-flex align-items-center ">
+                                    <i class="fa-solid fa-search fa-1x p-1"></i>
+                                    <input dir="rtl" class="search " type="search" name="" id="" placeholder="search">
+                                </div>
                                 <input dir="rtl" class="search " type="search" name="" id="" placeholder="search">
                             </div>
                             <i tabindex="0" class="menu-bar fa-solid fa-bars fa-1x  p-1"></i>
@@ -70,61 +73,8 @@
                     </div>
                 </nav>
             </div>
-
-
-            <nav class="btm-nav d-flex justify-content-center p-2 mt-1">
-                <div class="container d-flex justify-content-center">
-                    <ul class=" desktop-list d-flex align-items-center gap-5 fw-bold m-0 position-relative p-0">
-                        <div class="groups ps-2 pe-2">
-                            <li class="group gold-group"><a href="gold-gruop.html">Gold</a></li>
-                            <ul
-                                class="category category-gold d-flex text-center flex-column gap-1 align-items-center pt-2">
-                                <h5 class="fw-bold">Gold</h5>
-                                <div class="links d-flex gap-3">
-                                    <li><a href="category-page.html">Rings</a></li>
-                                    <li><a href="category-page.html">Bracelets</a></li>
-                                    <li><a href="category-page.html">Earrings</a></li>
-                                    <li><a href="category-page.html">Necklaces </a></li>
-                                    <li><a href="category-page.html">Chains</a></li>
-                                    <li><a href="category-page.html">Anklets</a></li>
-                                    <li><a href="category-page.html">Sets</a></li>
-                                </div>
-                            </ul>
-                        </div>
-                        <div class="groups ps-2 pe-2">
-                            <li class="group silver-group"><a href="silver-gruop.html">Silver</a></li>
-                            <ul class="category category-silver d-flex flex-column gap-1 align-items-center pt-2">
-                                <h5 class="fw-bold">Silver</h5>
-                                <div class="links d-flex gap-3">
-                                    <li><a href="category-page.html">Rings</a></li>
-                                    <li><a href="category-page.html">Bracelets</a></li>
-                                    <li><a href="category-page.html">Earrings</a></li>
-                                    <li><a href="category-page.html">Necklaces </a></li>
-                                    <li><a href="category-page.html">Chains</a></li>
-                                    <li><a href="category-page.html">Anklets</a></li>
-                                    <li><a href="category-page.html">Sets</a></li>
-                                </div>
-                            </ul>
-                        </div>
-                        <div class="groups ps-2 pe-2">
-                            <li class="group daimond-group"><a href="daimond-gruop.html">Diamonds</a></li>
-                            <ul class="category category-daimond d-flex flex-column gap-1 align-items-center pt-2">
-                                <h5 class="fw-bold">Diamonds</h5>
-                                <div class="links d-flex gap-3">
-                                    <li><a href="category-page.html">Rings</a></li>
-                                    <li><a href="category-page.html">Bracelets</a></li>
-                                    <li><a href="category-page.html">Earrings</a></li>
-                                    <li><a href="category-page.html">Necklaces </a></li>
-                                    <li><a href="category-page.html">Chains</a></li>
-                                    <li><a href="category-page.html">Anklets</a></li>
-                                    <li><a href="category-page.html">Sets</a></li>
-                                </div>
-                            </ul>
-                        </div>
-                    </ul>
-                </div>
-            </nav>
-            <div dir="rtl" class=" menu-mob menu-mob-hide accordion accordion-flush" id="accordionFlushExample">
+            <!-- mobail menu -->
+            <div dir="rtl" class=" menu-mob accordion accordion-flush" id="accordionFlushExample">
                 <div class="accordion-item">
                     <h2 class=" text-center accordion-header" id="flush-headingOne">
                         <button class="group gold-group accordion-button collapsed" type="button"
@@ -137,7 +87,7 @@
                         data-bs-parent="#accordionFlushExample">
                         <ul
                             class="category-mob category-gold d-flex text-center flex-column gap-1 align-items-center pt-2">
-                            <h5 class="fw-bold"><a href="gold-gruop.html">Gold</a></h5>
+                            <h5 class="fw-bold"><a href="gold-gruop.html">Gold </a></h5>
                             <div class="links d-flex gap-3 flex-column">
                                 <li><a href="category-page.html">Rings</a></li>
                                 <li><a href="category-page.html">Bracelets</a></li>
@@ -214,6 +164,152 @@
                             <li class="ar active">AR</li>
                             <li class="en">EN</li>
                         </ul>
+                    </div>
+                </div>
+            </div>
+            <nav class="btm-nav d-flex justify-content-center p-2 mt-1">
+                <div class="container d-flex justify-content-center">
+                    <ul class=" desktop-list d-flex align-items-center gap-5 fw-bold m-0 position-relative p-0">
+                        <div class="groups ps-2 pe-2">
+                            <li class="group gold-group"><a href="gold-gruop.html">Gold</a></li>
+                            <ul
+                                class="category category-gold d-flex text-center flex-column gap-1 align-items-center pt-2">
+                                <h5 class="fw-bold">Gold</h5>
+                                <div class="links d-flex gap-3">
+                                    <li><a href="category-page.html">Rings</a></li>
+                                    <li><a href="category-page.html">Bracelets</a></li>
+                                    <li><a href="category-page.html">Earrings</a></li>
+                                    <li><a href="category-page.html">Necklaces </a></li>
+                                    <li><a href="category-page.html">Chains</a></li>
+                                    <li><a href="category-page.html">Anklets</a></li>
+                                    <li><a href="category-page.html">Sets</a></li>
+                                </div>
+                            </ul>
+                        </div>
+                        <div class="groups ps-2 pe-2">
+                            <li class="group silver-group"><a href="silver-gruop.html">Silver</a></li>
+                            <ul class="category category-silver d-flex flex-column gap-1 align-items-center pt-2">
+                                <h5 class="fw-bold">Silver</h5>
+                                <div class="links d-flex gap-3">
+                                    <li><a href="category-page.html">Rings</a></li>
+                                    <li><a href="category-page.html">Bracelets</a></li>
+                                    <li><a href="category-page.html">Earrings</a></li>
+                                    <li><a href="category-page.html">Necklaces </a></li>
+                                    <li><a href="category-page.html">Chains</a></li>
+                                    <li><a href="category-page.html">Anklets</a></li>
+                                    <li><a href="category-page.html">Sets</a></li>
+                                </div>
+                            </ul>
+                        </div>
+                        <div class="groups ps-2 pe-2">
+                            <li class="group daimond-group"><a href="daimond-gruop.html">Diamonds</a></li>
+                            <ul class="category category-daimond d-flex flex-column gap-1 align-items-center pt-2">
+                                <h5 class="fw-bold">Diamonds</h5>
+                                <div class="links d-flex gap-3">
+                                    <li><a href="category-page.html">Rings</a></li>
+                                    <li><a href="category-page.html">Bracelets</a></li>
+                                    <li><a href="category-page.html">Earrings</a></li>
+                                    <li><a href="category-page.html">Necklaces </a></li>
+                                    <li><a href="category-page.html">Chains</a></li>
+                                    <li><a href="category-page.html">Anklets</a></li>
+                                    <li><a href="category-page.html">Sets</a></li>
+                                </div>
+                            </ul>
+                        </div>
+                    </ul>
+                </div>
+            </nav>
+            <!-- Modal Login -->
+            <div class="login-modal modal fade " id="staticBackdrop" data-bs-keyboard="false" tabindex="-1"
+                aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered m-auto">
+                    <div class="modal-content">
+                        <div class="modal-header align-items-start border-0 pb-0">
+                            <h5 class="modal-titled d-flex flex-column  align-items-center text-center w-100"
+                                id="staticBackdropLabel">
+                                <img class="m-3" src="../images/logo-3.svg" alt="" width="100px">
+                                <!-- Log in -->
+                            </h5>
+                        </div>
+                        <div class="modal-body border-0 p-0 pb-3">
+
+                            <!-- this will show before select the way -->
+                            <span class="login-title text-center d-block">Choese Way To login</span>
+
+                            <!-- email way -->
+                            <form action="" class="field-email d-none">
+                                <!-- Email input -->
+                                <div
+                                    class="email-input d-flex flex-column align-items-end pe-3 ps-3  m-2 position-relative">
+                                    <label for="email">* Email</label>
+                                    <input dir="rtl" class="w-100 ps-5 pe-2 p-1 mt-1 rounded-1" type="text" id="email"
+                                        placeholder="Email" required style="border:1px solid #ccc ;">
+                                    <i class="fa-solid fa-envelope p-1 position-absolute"
+                                        style="top: 33.3px; left: 20px;"></i>
+                                </div>
+
+                                <!-- verification input -->
+
+                                <div class="verification-email d-flex flex-column
+                                 align-items-end pe-3 ps-3 m-2 position-relative d-none">
+                                    <label for="email">* Verification code</label>
+                                    <input dir="rtl" class="w-100 ps-5 pe-2 p-1 mt-1" type="text" id="email"
+                                        placeholder="Enter verification code" maxlength="4" required
+                                        style="border:1px solid #ccc ;">
+                                </div>
+
+                                <!-- submit -->
+
+                                <div class="submit w-100  text-center pe-4 ps-4">
+                                    <button type="button" class="btn  w-100 shadow-none text-light mt-2"
+                                        style="background-color: var(--main-color) ;" onclick="showEmailCode()">
+                                        Go</button>
+                                </div>
+                            </form>
+
+                            <!-- phone way -->
+                            <form action="" class="field-phone d-none">
+
+                                <!-- Phone input -->
+
+                                <div
+                                    class="phone-input d-flex flex-column align-items-end pe-3 ps-3  m-2 position-relative">
+                                    <label for="">* phone</label>
+                                    <input class="txtBox w-100 ps-5 pe-2 p-1 mt-1 rounded-1" type="tel" id="txtPhone"
+                                        required style="border:1px solid #ccc ;">
+                                    <!-- <i class="fa-solid fa-mobile p-1 position-absolute"
+                                        style="top: 33.3px; left: 20px;"></i> -->
+                                </div>
+
+                                <!-- verification input -->
+
+                                <div class="verification-phone d-flex flex-column
+                                 align-items-end pe-3 ps-3 m-2 position-relative d-none">
+                                    <label for="phone">* Verification code</label>
+                                    <input dir="rtl" class="w-100 ps-5 pe-2 p-1 mt-1" type="text" id="phone"
+                                        placeholder="Enter verification code" maxlength="4" required
+                                        style="border:1px solid #ccc ;">
+                                </div>
+
+                                <!-- submit -->
+
+                                <div class="submit w-100  text-center pe-4 ps-4">
+                                    <button type="button" class="btn  w-100 shadow-none text-light mt-2"
+                                        style="background-color: var(--main-color) ;" onclick="showPhoneCode()">
+                                        Go</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer justify-content-center ">
+                            <button type="button" class="btn email" onclick="showEmail()">
+                                Email
+                                <i class="fa-solid fa-envelope p-1"></i>
+                            </button>
+                            <button type="button" class="btn phone" onclick="showPhone()">
+                                Phone
+                                <i class=" fa-solid fa-mobile p-1"></i>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>

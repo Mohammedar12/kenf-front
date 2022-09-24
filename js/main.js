@@ -7,6 +7,7 @@ let transBg = document.createElement("div");
 transBg.className = "trans-bg";
 transBg.innerHTML = "";
 document.body.appendChild(transBg);
+transBg.style.display = "none";
 
 menuBar.addEventListener("click", (e) => {
   menuList.classList.add("menu-mob-show");
@@ -85,3 +86,9 @@ $(function() {
   $('#txtPhone').val(code).intlTelInput();
 });
 
+// cetering the kenf collection
+
+window.addEventListener('load', () => {
+  let scrollElement = document.querySelector('.scroll-bar-center');
+  scrollElement.scrollLeft =  (scrollElement.scrollWidth - scrollElement.clientWidth ) / 2;
+});
