@@ -118,33 +118,33 @@ input {
 }
 
 .top-nav .box:nth-child(1) {
-  width: 40%;
+  width: calc(100% / 3);
   justify-content: start;
 }
 
-/* .top-nav .box:nth-child(2) {
-  width: 128.6px;
+.top-nav .box:nth-child(2) {
+  width: calc(100% / 3);
   display: flex;
   justify-content: center;
   margin: 0;
-} */
+}
 
 .top-nav .box:nth-child(3) {
-  width: 40%;
+  width: calc(100% / 3);
   justify-content: end;
 }
 
-@media (max-width: 330px) {
+/* @media (max-width: 330px) {
   .top-nav .box:nth-child(1) {
     width: max-content;
   }
-  /* .top-nav .box:nth-child(2) {
+  .top-nav .box:nth-child(2) {
     width: 56px;
-  } */
+  }
   .top-nav .box:nth-child(3) {
     width: max-content;
   }
-}
+} */
 
 .top-nav .search-box i {
   z-index: 98;
