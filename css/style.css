@@ -117,34 +117,24 @@ input {
   background-color: #fff;
 }
 
-.top-nav .box:nth-child(1) {
-  width: calc(100% / 3);
-  justify-content: start;
-}
-
-.top-nav .box:nth-child(2) {
-  width: calc(100% / 3);
-  display: flex;
-  justify-content: center;
-  margin: 0;
-}
-
-.top-nav .box:nth-child(3) {
-  width: calc(100% / 3);
-  justify-content: end;
-}
-
-/* @media (max-width: 330px) {
+@media (max-width: 330px) {
   .top-nav .box:nth-child(1) {
-    width: max-content;
+    width: 40%;
+    justify-content: start;
   }
+
   .top-nav .box:nth-child(2) {
-    width: 56px;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    margin: 0;
   }
+
   .top-nav .box:nth-child(3) {
-    width: max-content;
+    width: 40%;
+    justify-content: end;
   }
-} */
+}
 
 .top-nav .search-box i {
   z-index: 98;
@@ -187,7 +177,7 @@ input {
     -moz-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
     -o-transform: translateX(-50%);
-}
+  }
   .top-nav .focused {
     bottom: -31px;
     z-index: 100;
@@ -296,7 +286,7 @@ input {
   display: flex !important;
 }
 
-.login-modal .iti--allow-dropdown  {
+.login-modal .iti--allow-dropdown {
   width: 100%;
 }
 
@@ -950,19 +940,17 @@ input {
 
 .kenf-products .container {
   overflow-x: auto;
-
 }
 
-.kenf-products .container::-webkit-scrollbar{
+.kenf-products .container::-webkit-scrollbar {
   height: 5px;
   width: 4px;
-
 }
 
-.kenf-products .container::-webkit-scrollbar-thumb:horizontal{
-  background:var(--main-color);
+.kenf-products .container::-webkit-scrollbar-thumb:horizontal {
+  background: var(--main-color);
   border-radius: 10px;
-} 
+}
 
 .kenf-products .container::-webkit-scrollbar-track {
   width: 10px;
@@ -972,26 +960,24 @@ input {
   border-radius: 10px;
 }
 
-@media (max-width:650px) {
-
+@media (max-width: 650px) {
   .kenf-products .container {
     padding-bottom: 20px;
   }
-
 }
 
-@media (max-width:500px) {
+@media (max-width: 500px) {
   .kenf-products .container::-webkit-scrollbar-track {
     margin: 0 170px;
   }
 }
 
-@media (max-width:400px) {
+@media (max-width: 400px) {
   .kenf-products .container::-webkit-scrollbar-track {
     margin: 0 150px;
   }
 }
-@media (max-width:350px) {
+@media (max-width: 350px) {
   .kenf-products .container::-webkit-scrollbar-track {
     margin: 0 130px;
   }
@@ -1000,7 +986,6 @@ input {
 .kenf-products .container::-webkit-scrollbar-track-piece {
   margin: 0 auto;
 }
-
 
 .kenf-products .items {
   width: 100%;
