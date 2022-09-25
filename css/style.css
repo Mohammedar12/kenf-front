@@ -117,7 +117,7 @@ input {
   background-color: #fff;
 }
 
-@media (max-width: 330px) {
+@media (min-width: 340px) {
   .top-nav .box:nth-child(1) {
     width: 40%;
     justify-content: start;
