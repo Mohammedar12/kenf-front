@@ -117,7 +117,7 @@ input {
   background-color: #fff;
 }
 
-.top-nav .box:nth-child(1) {
+/* .top-nav .box:nth-child(1) {
   width: 40%;
   justify-content: start;
 }
@@ -142,7 +142,7 @@ input {
   .top-nav .box:nth-child(3) {
     width: 115px;
   }
-}
+} */
 
 .top-nav .search-box i {
   z-index: 98;
