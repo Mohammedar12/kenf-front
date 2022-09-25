@@ -75,16 +75,29 @@ function restAll() {
 
 // country codes 
 
-$(function() {
-  $("#country").change(function() {
-    let countryCode = $(this).find('option:selected').data('country-code');
-    let value = "+" + $(this).val();
-    $('#txtPhone').val(value).intlTelInput("setCountry", countryCode);
-  });
+// $(function() {
+//   $("#country").change(function() {
+//     let countryCode = $(this).find('option:selected').data('country-code');
+//     let value = "+" + $(this).val();
+//     $('#txtPhone').val(value).intlTelInput("setCountry", countryCode);
+//   });
   
-  var code = "+966";
-  $('#txtPhone').val(code).intlTelInput();
+//   var code = "+966";
+//   $('#txtPhone').val(code).intlTelInput();
+// });
+
+var input = document.querySelector("#phone");
+window.intlTelInput(input, {
+  initialCountry: "auto",
+  geoIpLookup: function(callback) {
+    $.get('https://ipinfo.io', function() {}, "jsonp").always(function(resp) {
+      var countryCode = (resp && resp.country) ? resp.country : "us";
+      callback(countryCode);
+    });
+  },
+  utilsScript: "../../build/js/utils.js" // just for formatting/placeholders etc
 });
+
 
 // cetering the kenf collection
 
@@ -92,3 +105,4 @@ window.addEventListener('load', () => {
   let scrollElement = document.querySelector('.scroll-bar-center');
   scrollElement.scrollLeft =  (scrollElement.scrollWidth - scrollElement.clientWidth ) / 2;
 });
+
