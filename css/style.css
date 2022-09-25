@@ -120,38 +120,39 @@ input {
 @media (max-width: 340px) {
   .top-nav .box:nth-child(1) {
     width: 40%;
-    justify-content: start;
+    /* justify-content: start; */
   }
 
   .top-nav .box:nth-child(2) {
     width: 20%;
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     margin: 0;
   }
 
   .top-nav .box:nth-child(3) {
     width: 40%;
-    justify-content: end;
+    /* justify-content: end; */
   }
 }
 
 @media (min-width: 350px) {
   .top-nav .box:nth-child(1) {
     width: calc(100% / 3);
-    justify-content: start;
+    /* justify-content: start; */
   }
 
   .top-nav .box:nth-child(2) {
     width: calc(100% / 3);
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     margin: 0;
   }
 
   .top-nav .box:nth-child(3) {
     width: calc(100% / 3);
-    justify-content: end;
+    /* justify-content: end; */
+
   }
 }
 
