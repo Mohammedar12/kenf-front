@@ -136,13 +136,13 @@ input {
 
 @media (max-width: 330px) {
   .top-nav .box:nth-child(1) {
-    width: 115px;
+    width: max-content;
   }
   /* .top-nav .box:nth-child(2) {
     width: 56px;
   } */
   .top-nav .box:nth-child(3) {
-    width: 115px;
+    width: max-content;
   }
 }
 
