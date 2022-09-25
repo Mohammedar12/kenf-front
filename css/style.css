@@ -180,8 +180,12 @@ input {
 @media (max-width: 767px) {
   .top-nav .search {
     left: 50%;
-    translate: -50% ;
-  }
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
   .top-nav .focused {
     bottom: -31px;
     z-index: 100;
