@@ -30,44 +30,67 @@
                 <nav class="main-nav p-1">
                     <div class="container">
                         <div class="top-nav position-relative d-flex justify-content-between align-items-center p-3 ">
-                            <div class="box box-1 d-flex align-items-center">
-                                <a href="bag-shopping.html">
-                                    <i class="fa-solid fa-bag-shopping fa-1x p-md-2 p-sm-1 "></i>
-                                </a>
-                                <a href="favorite.html">
-                                    <i class="fa-solid fa-heart fa-1x p-md-2 p-sm-1""></i>
-                                </a>
-                                <div class=" user position-relative">
-                                        <i class="fa-solid fa-user user-icon fa-1x p-md-2 p-sm-1""></i>
-                                    <ul class=" user-list flex-column position-absolute gap-2">
+                            <div class="left-content col-md-5 col-4">
+                                <div class="left-content_container">
+
+                                    <div class="bag-icon">
+                                        <a href="bag-shopping.html">
+                                            <i class="fa-solid fa-bag-shopping fa-1x p-md-2 p-sm-1"></i>
+                                        </a>
+                                    </div>
+
+                                    <div class="favorite-icon">
+                                        <a href="favorite.html">
+                                            <i class="fa-solid fa-heart fa-1x p-md-2 p-sm-1"></i>
+                                        </a>
+                                    </div>
+
+                                    <div class=" user position-relative">
+                                        <i class="fa-solid fa-user user-icon fa-1x p-md-2 p-sm-1"></i>
+                                        <ul class=" user-list flex-column position-absolute gap-2">
                                             <li><button onclick="restAll()" type="button" class="btn shadow-none p-0"
                                                     data-bs-toggle="modal"
-                                                    data-bs-target="#staticBackdrop">Login</button></li>
+                                                    data-bs-target="#staticBackdrop">Login</button>
+                                            </li>
                                             <li><a href="">My profile</a></li>
                                             <li><a href="orders.html">My orders</a></li>
                                             <li><a href="">Logout</a></li>
-                                            </ul>
-                            </div>
-                        </div>
-                        <div class="box logo">
-                            <a href="index.html"><img class="img-fluid " src="../images/logo.svg" alt=""></a>
-                        </div>
-                        <div class="box d-flex align-items-center gap-3 ">
-                            <div class="lang d-none d-md-flex align-items-center gap-1 pb-2 pt-2 position-relative">
-                                <i class="fa-solid fa-globe fa-1x"></i> <span class="fw-bold ar ">AR</span>
-                                <ul class="list-lang ">
-                                    <li class="ar active">AR</li>
-                                    <li class="en">EN</li>
-                                </ul>
-                            </div>
-                            <div tabindex="0" class=" search-box d-flex align-items-center ">
-                                <div tabindex="0" class=" search-box d-flex align-items-center ">
-                                    <i class="fa-solid fa-search fa-1x p-1"></i>
-                                    <input dir="rtl" class="search " type="search" name="" id="" placeholder="search">
+                                        </ul>
+                                    </div>
+
                                 </div>
-                                <input dir="rtl" class="search " type="search" name="" id="" placeholder="search">
                             </div>
-                            <i tabindex="0" class="menu-bar fa-solid fa-bars fa-1x  p-1"></i>
+                            <div class="center-content col-md-2 col-4">
+                                <div class="center-content_container">
+                                    <div class="logo">
+                                        <a href="index.html">
+                                            <img class="img-fluid " src="../images/logo.svg" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="right-content col-md-5 col-4">
+                                <div class="right-content_container">
+                                    <div
+                                        class="lang d-none d-md-flex align-items-center gap-1 pb-2 pt-2 position-relative">
+                                        <i class="fa-solid fa-globe fa-1x"></i> <span class="fw-bold ar ">AR</span>
+                                        <ul class="list-lang ">
+                                            <li class="ar active">AR</li>
+                                            <li class="en">EN</li>
+                                        </ul>
+                                    </div>
+                                    <div tabindex="0" class=" search-box d-flex align-items-center ">
+                                        <div tabindex="0" class=" search-box d-flex align-items-center ">
+                                            <i class="fa-solid fa-search fa-1x p-1"></i>
+                                            <input dir="rtl" class="search " type="search" name="" id=""
+                                                placeholder="search">
+                                        </div>
+                                    </div>
+                                    <div class="bar">
+                                        <i class="menu-bar fa-solid fa-bars fa-1x  p-1"></i>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </nav>
@@ -354,39 +377,39 @@
             <div class="category_2 pt-2">
                 <div class="container text-center">
                     <div class="rows row-1 pb-1">
-                        <a href="" class="cate">
+                        <a href="category-page.html" class="cate">
                             <img src="../images/bracelets.png" alt="img">
-                            <h6 class="cate-title">أساور</h6>
+                            <h6 class="cate-title">Bracelets</h6>
                         </a>
 
-                        <a href="" class="cate">
+                        <a href="category-page.html" class="cate">
                             <img src="../images/earrings.png" alt="img">
-                            <h6 class="cate-title">أقراط</h6>
+                            <h6 class="cate-title">Earrings</h6>
                         </a>
 
-                        <a href="" class="cate">
+                        <a href="category-page.html" class="cate">
                             <img src="../images/Chains.png" alt="img">
                             <h6 class="cate-title">Chains</h6>
                         </a>
 
-                        <a href="" class="cate">
+                        <a href="category-page.html" class="cate">
                             <img src="../images/rings.png" alt="img">
                             <h6 class="cate-title">Rings</h6>
                         </a>
 
                     </div>
                     <div class="rows row-2 pt-1">
-                        <a href="" class="cate">
+                        <a href="category-page.html" class="cate">
                             <img src="../images/Sets.png" alt="img">
-                            <h6 class="cate-title">Rings</h6>
+                            <h6 class="cate-title">Sets</h6>
                         </a>
-                        <a href="" class="cate">
+                        <a href="category-page.html" class="cate">
                             <img src="../images/necles.png" alt="img">
-                            <h6 class="cate-title">Rings</h6>
+                            <h6 class="cate-title">Necklaces</h6>
                         </a>
-                        <a href="" class="cate">
+                        <a href="category-page.html" class="cate">
                             <img src="../images/Other Categories.png" alt="img">
-                            <h6 class="cate-title">Rings</h6>
+                            <h6 class="cate-title">Other Categories</h6>
                         </a>
                     </div>
                 </div>

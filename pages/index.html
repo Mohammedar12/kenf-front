@@ -34,44 +34,67 @@
                 <nav class="main-nav p-1">
                     <div class="container">
                         <div class="top-nav position-relative d-flex justify-content-between align-items-center p-3 ">
-                            <div class="box box-1 d-flex align-items-center">
-                                <a href="bag-shopping.html">
-                                    <i class="fa-solid fa-bag-shopping fa-1x p-md-2 p-sm-1 "></i>
-                                </a>
-                                <a href="favorite.html">
-                                    <i class="fa-solid fa-heart fa-1x p-md-2 p-sm-1""></i>
-                                </a>
-                                <div class=" user position-relative">
-                                        <i class="fa-solid fa-user user-icon fa-1x p-md-2 p-sm-1""></i>
-                                    <ul class=" user-list flex-column position-absolute gap-2">
+                            <div class="left-content col-md-5 col-4">
+                                <div class="left-content_container">
+
+                                    <div class="bag-icon">
+                                        <a href="bag-shopping.html">
+                                            <i class="fa-solid fa-bag-shopping fa-1x p-md-2 p-sm-1"></i>
+                                        </a>
+                                    </div>
+
+                                    <div class="favorite-icon">
+                                        <a href="favorite.html">
+                                            <i class="fa-solid fa-heart fa-1x p-md-2 p-sm-1"></i>
+                                        </a>
+                                    </div>
+
+                                    <div class=" user position-relative">
+                                        <i class="fa-solid fa-user user-icon fa-1x p-md-2 p-sm-1"></i>
+                                        <ul class=" user-list flex-column position-absolute gap-2">
                                             <li><button onclick="restAll()" type="button" class="btn shadow-none p-0"
                                                     data-bs-toggle="modal"
-                                                    data-bs-target="#staticBackdrop">Login</button></li>
+                                                    data-bs-target="#staticBackdrop">Login</button>
+                                            </li>
                                             <li><a href="">My profile</a></li>
                                             <li><a href="orders.html">My orders</a></li>
                                             <li><a href="">Logout</a></li>
-                                            </ul>
-                            </div>
-                        </div>
-                        <div class="box logo">
-                            <a href="index.html"><img class="img-fluid " src="../images/logo.svg" alt=""></a>
-                        </div>
-                        <div class="box d-flex align-items-center gap-3 ">
-                            <div class="lang d-none d-md-flex align-items-center gap-1 pb-2 pt-2 position-relative">
-                                <i class="fa-solid fa-globe fa-1x"></i> <span class="fw-bold ar ">AR</span>
-                                <ul class="list-lang ">
-                                    <li class="ar active">AR</li>
-                                    <li class="en">EN</li>
-                                </ul>
-                            </div>
-                            <div tabindex="0" class=" search-box d-flex align-items-center ">
-                                <div tabindex="0" class=" search-box d-flex align-items-center ">
-                                    <i class="fa-solid fa-search fa-1x p-1"></i>
-                                    <input dir="rtl" class="search " type="search" name="" id="" placeholder="search">
+                                        </ul>
+                                    </div>
+
                                 </div>
-                                <input dir="rtl" class="search " type="search" name="" id="" placeholder="search">
                             </div>
-                            <i tabindex="0" class="menu-bar fa-solid fa-bars fa-1x  p-1"></i>
+                            <div class="center-content col-md-2 col-4">
+                                <div class="center-content_container">
+                                    <div class="logo">
+                                        <a href="index.html">
+                                            <img class="img-fluid " src="../images/logo.svg" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="right-content col-md-5 col-4">
+                                <div class="right-content_container">
+                                    <div
+                                        class="lang d-none d-md-flex align-items-center gap-1 pb-2 pt-2 position-relative">
+                                        <i class="fa-solid fa-globe fa-1x"></i> <span class="fw-bold ar ">AR</span>
+                                        <ul class="list-lang ">
+                                            <li class="ar active">AR</li>
+                                            <li class="en">EN</li>
+                                        </ul>
+                                    </div>
+                                    <div tabindex="0" class=" search-box d-flex align-items-center ">
+                                        <div tabindex="0" class=" search-box d-flex align-items-center ">
+                                            <i class="fa-solid fa-search fa-1x p-1"></i>
+                                            <input dir="rtl" class="search " type="search" name="" id=""
+                                                placeholder="search">
+                                        </div>
+                                    </div>
+                                    <div class="bar">
+                                        <i class="menu-bar fa-solid fa-bars fa-1x  p-1"></i>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </nav>
@@ -278,7 +301,8 @@
                                 <div
                                     class="phone-input d-flex flex-column align-items-end pe-3 ps-3  m-2 position-relative">
                                     <label for="">* phone</label>
-                                    <input type="tel" name="" id="phone" class="w-100 ps-5 pe-2 p-1 mt-1 rounded-1" required style="border:1px solid #ccc ;">
+                                    <input type="tel" name="" id="phone" class="w-100 ps-5 pe-2 p-1 mt-1 rounded-1"
+                                        required style="border:1px solid #ccc ;">
                                     <!-- <input class="txtBox w-100 ps-5 pe-2 p-1 mt-1 rounded-1" type="tel" id="txtPhone"
                                         required style="border:1px solid #ccc ;"> -->
                                     <!-- <i class="fa-solid fa-mobile p-1 position-absolute"
@@ -320,39 +344,16 @@
         </nav>
 
         <!-- banners -->
-        <section class="banners carousell pb-4">
-            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true ">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
-                        class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                        aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                        aria-label="Slide 3"></button>
+        <section class="banners pb-4">
+            <div  class="banners-main owl-carousel owl-theme ">
+                <div class="item">
+                    <img src="../images/بنر رئيسي 1.png" class="d-block img-fluid banners-descktop" alt="...">
+                    <img src="../images/bannn mob 1.png" class="d-block img-fluid banners-mobail" alt="...">
                 </div>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="../images/بنر رئيسي 1.png" class="d-block img-fluid banners-descktop" alt="...">
-                        <img src="../images/bannn mob 1.png" class="d-block img-fluid banners-mobail" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="../images/بنر ثاني 1.png" class="d-block img-fluid banners-descktop" alt="...">
-                        <img src="../images/bannn mob 2.png" class="d-block img-fluid banners-mobail" alt="...">
-                    </div>
-                    <!-- <div class="carousel-item">
-                        <img src="../images/" class="d-block w-100" alt="...">
-                    </div> -->
+                <div class="item">
+                    <img src="../images/بنر ثاني 1.png" class="d-block img-fluid banners-descktop" alt="...">
+                    <img src="../images/bannn mob 2.png" class="d-block img-fluid banners-mobail" alt="...">
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
             </div>
         </section>
 
@@ -433,12 +434,12 @@
                     <div class="rows row-1 pb-1">
                         <a href="category-page.html" class="cate">
                             <img src="../images/bracelets.png" alt="img">
-                            <h6 class="cate-title">أساور</h6>
+                            <h6 class="cate-title">Bracelets</h6>
                         </a>
 
                         <a href="category-page.html" class="cate">
                             <img src="../images/earrings.png" alt="img">
-                            <h6 class="cate-title">أقراط</h6>
+                            <h6 class="cate-title">Earrings</h6>
                         </a>
 
                         <a href="category-page.html" class="cate">
@@ -455,15 +456,15 @@
                     <div class="rows row-2 pt-1">
                         <a href="category-page.html" class="cate">
                             <img src="../images/Sets.png" alt="img">
-                            <h6 class="cate-title">Rings</h6>
+                            <h6 class="cate-title">Sets</h6>
                         </a>
                         <a href="category-page.html" class="cate">
                             <img src="../images/necles.png" alt="img">
-                            <h6 class="cate-title">Rings</h6>
+                            <h6 class="cate-title">Necklaces</h6>
                         </a>
                         <a href="category-page.html" class="cate">
                             <img src="../images/Other Categories.png" alt="img">
-                            <h6 class="cate-title">Rings</h6>
+                            <h6 class="cate-title">Other Categories</h6>
                         </a>
                     </div>
                 </div>
@@ -508,9 +509,9 @@
     </section> -->
 
         <!-- Kenf Products -->
-        <section class="kenf-products-section pt-3 pb-3">
+        <section class="kenf-collection-section pt-3 pb-3">
             <h3 class="section-title">Kenf’s Collection</h3>
-            <div class="kenf-products pt-2">
+            <div class="kenf-collection pt-2">
                 <div class="container scroll-bar-center">
                     <div class="items d-flex justify-content-center text-center">
                         <div class="item ">
@@ -533,6 +534,9 @@
                 </div>
             </div>
         </section>
+
+        <!-- footer  -->
+
         <footer>
             <div class="container">
                 <div class="logo-footer">
@@ -572,17 +576,51 @@
                     <p>كنف منصة تجارة من اكبر المنصات بالشرق الاوسط </p>
                 </div>
             </div>
+            <div class="bottom_footer ">
+                <div class="bottom_footer-container">
+                    <div class="footer-content col-md-4 col-4">
+                        <div class="left-content">
+                            <div class="img">
+                                <img src="../images/payment.png" alt="img">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-content col-md-3 col-4">
+                        <div class="center-content">
+                            <div class="copyright">
+                                <span dir="rtl">جميع الحقوق محفوظة لـ KENF 2022 <span>&copy;</span></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-content col-md-4 col-4">
+                        <div class="right-content"></div>
+                    </div>
+                </div>
+            </div>
         </footer>
     </div>
+
+    <!-- icon script -->
     <script src="../js/all.min.js"></script>
+
+    <!-- bootstrap script -->
     <script src="../js/bootstrap.bundle.min.js"></script>
+
+    <!-- jquery script -->
     <script src="https://code.jquery.com/jquery-3.6.1.js"
         integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+
+    <!-- intlTelInput script -->
     <script type="text/javascript" src="../build/js/intlTelInput.js"></script>
+
+    <!-- owl main script -->
     <script src="../OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
-    <script src="../js/main.js"></script>
+
+    <!-- owl script -->
     <script src="../js/owlCarousel.js"></script>
 
+    <!-- main script -->
+    <script src="../js/main.js"></script>
 
 </body>
 
