@@ -418,17 +418,17 @@ input {
   top: 63px !important;
 }
 
-.accordion {
+.nav .accordion {
   width: 100%;
   text-align: center;
 }
 
-.accordion-item {
+.menu-mob .accordion-item {
   border: 0 !important;
   outline: 0 !important;
 }
 
-.accordion-button {
+.menu-mob .accordion-button {
   position: relative;
   display: block;
   align-items: center;
@@ -938,21 +938,21 @@ input {
 
 /* kenf */
 
-.kenf-products .container {
+.kenf-collection .container {
   overflow-x: auto;
 }
 
-.kenf-products .container::-webkit-scrollbar {
+.kenf-collection .container::-webkit-scrollbar {
   height: 5px;
   width: 4px;
 }
 
-.kenf-products .container::-webkit-scrollbar-thumb:horizontal {
+.kenf-collection .container::-webkit-scrollbar-thumb:horizontal {
   background: var(--main-color);
   border-radius: 10px;
 }
 
-.kenf-products .container::-webkit-scrollbar-track {
+.kenf-collection .container::-webkit-scrollbar-track {
   width: 10px;
   height: 10px;
   background-color: var(--sec-color);
@@ -961,63 +961,63 @@ input {
 }
 
 @media (max-width: 650px) {
-  .kenf-products .container {
+  .kenf-collection .container {
     padding-bottom: 20px;
   }
 }
 
 @media (max-width: 500px) {
-  .kenf-products .container::-webkit-scrollbar-track {
+  .kenf-collection .container::-webkit-scrollbar-track {
     margin: 0 170px;
   }
 }
 
 @media (max-width: 400px) {
-  .kenf-products .container::-webkit-scrollbar-track {
+  .kenf-collection .container::-webkit-scrollbar-track {
     margin: 0 150px;
   }
 }
 @media (max-width: 350px) {
-  .kenf-products .container::-webkit-scrollbar-track {
+  .kenf-collection .container::-webkit-scrollbar-track {
     margin: 0 130px;
   }
 }
 
-.kenf-products .container::-webkit-scrollbar-track-piece {
+.kenf-collection .container::-webkit-scrollbar-track-piece {
   margin: 0 auto;
 }
 
-.kenf-products .items {
+.kenf-collection .items {
   width: 100%;
   min-width: 600px;
   gap: 20px;
 }
 
-.kenf-products .items .item-title {
+.kenf-collection .items .item-title {
   margin-top: 10px;
   font-weight: bold;
   color: var(--main-color);
 }
 
 @media (max-width: 500px) {
-  .kenf-products .items {
+  .kenf-collection .items {
     gap: 10px;
   }
-  .kenf-products .items .item-title {
+  .kenf-collection .items .item-title {
     font-size: 16px;
   }
 }
 
 @media (max-width: 767px) {
-  .kenf-products .container {
+  .kenf-collection .container {
     max-width: 750px !important;
   }
-  .kenf-products .container {
+  .kenf-collection .container {
     max-width: 750px !important;
   }
 }
 
-.kenf-products .item img {
+.kenf-collection .item img {
   max-width: 100%;
 }
 
