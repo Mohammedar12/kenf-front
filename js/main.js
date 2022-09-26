@@ -1,4 +1,4 @@
-let menuBar = document.querySelector(".menu-bar");
+let menuBar = document.querySelector(".bar");
 let menuList = document.querySelector(".menu-mob");
 
 // transBg this to close menu and search bar
@@ -74,17 +74,6 @@ function restAll() {
 }
 
 // country codes
-
-// $(function() {
-//   $("#country").change(function() {
-//     let countryCode = $(this).find('option:selected').data('country-code');
-//     let value = "+" + $(this).val();
-//     $('#txtPhone').val(value).intlTelInput("setCountry", countryCode);
-//   });
-
-//   var code = "+966";
-//   $('#txtPhone').val(code).intlTelInput();
-// });
 
 var input = document.querySelector("#phone");
 window.intlTelInput(input, {
