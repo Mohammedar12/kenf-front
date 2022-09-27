@@ -12,11 +12,6 @@ $(".banners-main").owlCarousel({
   },
 });
 
-// change nav icon 
-
-document.querySelector(".banners-main .owl-prev").innerHTML = `<i class="fa-solid fa-angle-left fa-2x"></i>`
-document.querySelector(".banners-main .owl-next").innerHTML = `<i class="fa-solid fa-angle-right fa-2x"></i>`
-
 $(".exclusive-carousel").owlCarousel({
   center: true,
   loop: true,
@@ -68,3 +63,7 @@ $(".suggested-products").owlCarousel({
     },
   },
 });
+
+// change nav icon for banners-main
+document.querySelector(".banners-main .owl-prev").innerHTML = `<i class="fa-solid fa-angle-left fa-2x"></i>`;
+document.querySelector(".banners-main .owl-next").innerHTML = `<i class="fa-solid fa-angle-right fa-2x"></i>`;

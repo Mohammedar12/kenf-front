@@ -316,19 +316,25 @@ input {
   width: max-content;
   font-size: 0.9rem;
   border-radius: 4px;
-  padding: 0;
+  padding: 5px;
   margin: 0 0 0 10px;
   z-index: 99;
   box-shadow: var(--main-shadow);
+  border-radius: 10px;
   -webkit-transform: translateX(-50%);
   -moz-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   -o-transform: translateX(-50%);
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
 
 .lang span {
   cursor: default;
 }
+
 .lang:hover span + .list-lang {
   display: block;
 }
@@ -336,11 +342,17 @@ input {
 .list-lang li {
   padding: 5px 25px;
   cursor: pointer;
+  margin: 5px 0;
+  border-radius: 4px;
   transition: var(--transition);
   -webkit-transition: var(--transition);
   -moz-transition: var(--transition);
   -ms-transition: var(--transition);
   -o-transition: var(--transition);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
 }
 
 .lang .list-lang li:hover {
@@ -423,7 +435,7 @@ input {
   text-align: center;
 }
 
-.menu-mob .accordion-item {
+.accordion-item {
   border: 0 !important;
   outline: 0 !important;
 }
@@ -495,7 +507,7 @@ input {
   padding: 0px 20px;
   opacity: 0;
   z-index: -1;
-  /* display: none !important; */
+  border-radius: 10px;
   transition: var(--transition);
   -webkit-transform: translateX(-50%);
   -moz-transform: translateX(-50%);
@@ -505,6 +517,10 @@ input {
   -moz-transition: var(--transition);
   -ms-transition: var(--transition);
   -o-transition: var(--transition);
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
 
 .category-mob {
@@ -557,37 +573,26 @@ input {
   -o-transform: translateY(-2px) scale(0.9);
 }
 
-.carousell {
-  z-index: -1;
+.banners .owl-dots {
+  margin-top: 10px !important;
 }
 
-.carousell img {
-  width: 100%;
-}
-
-.carousel-indicators {
-  bottom: -35px !important;
-}
-
-.carousel-indicators button {
-  background-color: var(--main-color) !important ;
+.owl-dots .owl-dot span {
+  width: 30px !important;
   height: 4px !important;
-  border: 1px !important;
-  border-radius: 5px !important;
-  -webkit-border-radius: 5px !important;
-  -moz-border-radius: 5px !important;
-  -ms-border-radius: 5px !important;
-  -o-border-radius: 5px !important;
-}
-
-.carousel-indicators button:not(.active) {
+  margin: 0px 4px !important;
   background-color: var(--sec-color) !important ;
-  opacity: 0.7 !important;
+  display: block;
+  transition: opacity 0.2s ease;
+  border-radius: 30px;
+}
+.owl-dots .owl-dot.active span {
+  background-color: var(--main-color) !important ;
 }
 
 .banners .owl-nav {
   position: absolute;
-  top: 40%;
+  top: calc(50% - 50px);
   transform: translateY(-50%);
   width: 100%;
   margin-top: 0;
@@ -596,6 +601,7 @@ input {
 .banners .owl-nav .owl-prev,
 .banners .owl-nav .owl-next {
   position: absolute;
+  outline: none;
   background-color: #21252971 !important;
   transition: var(--transition);
   -webkit-transition: var(--transition);
@@ -605,7 +611,7 @@ input {
 }
 
 .banners .owl-nav .owl-prev:hover,
-.banners .owl-nav .owl-next:hover{
+.banners .owl-nav .owl-next:hover {
   background-color: #212529bb !important;
 }
 
@@ -615,28 +621,27 @@ input {
 
 .banners .owl-nav .owl-next {
   right: 0px;
-
 }
-.banners .owl-nav svg{
+
+.banners .owl-nav svg {
   color: #fff;
   padding: 20px !important;
 }
 
-@media (min-width: 501px) {
-  .banners-descktop {
-    display: block !important;
-  }
-  .banners-mobail {
-    display: none !important;
-  }
+.banners-mobail {
+  display: none !important;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 700px) {
   .banners-descktop {
     display: none !important;
   }
   .banners-mobail {
     display: block !important;
+  }
+  .banners .owl-nav svg {
+    padding: 10px !important;
+    font-size: 1.1rem;
   }
 }
 
@@ -1249,8 +1254,6 @@ input {
   justify-content: space-between;
   align-items: center;
 }
-
-/* .product .bag {} */
 
 .products .product .bag svg {
   max-width: 30px;
@@ -2039,9 +2042,8 @@ input {
   width: 100%;
 }
 
-.bag .bag-product .info .option .size span,
-.bag .bag-product .info .option .karate span {
-  margin: 0 20px 0 0;
+.bag .bag-product .info .option .size span{
+  margin: 0 20px 0 ;
   font-size: 13px;
   padding: 1px 25px;
   font-weight: bold;
@@ -2052,11 +2054,6 @@ input {
   -moz-border-radius: 6px;
   -ms-border-radius: 6px;
   -o-border-radius: 6px;
-}
-
-.bag .bag-product .info .option .karate span {
-  background-color: var(--sec-color);
-  color: var(--main-color);
 }
 
 .bag .bag-product .delete {

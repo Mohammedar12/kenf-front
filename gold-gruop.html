@@ -14,6 +14,10 @@
     <!-- bootstrap -->
     <link rel="stylesheet" href="../css/bootstrap.min.css">
 
+    <!-- OwlCarousel2 -->
+    <link rel="stylesheet" href="../OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="../OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
+
     <!-- intl Tel Input -->
     <link rel="stylesheet" href="../build/css/intlTelInput.css" />
 
@@ -336,39 +340,16 @@
             </div>
         </nav>
         <!-- banners -->
-        <section class="banners carousell pb-4">
-            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true ">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
-                        class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                        aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                        aria-label="Slide 3"></button>
+        <section class="banners pb-4">
+            <div class="banners-main owl-carousel owl-theme ">
+                <div class="item">
+                    <img src="../images/بنر رئيسي 1.png" class="d-block img-fluid banners-descktop" alt="...">
+                    <img src="../images/bannn mob 1.png" class="d-block img-fluid banners-mobail" alt="...">
                 </div>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="../images/بنر رئيسي 1.png" class="d-block img-fluid banners-descktop" alt="...">
-                        <img src="../images/bannn mob 1.png" class="d-block img-fluid banners-mobail" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="../images/بنر ثاني 1.png" class="d-block img-fluid banners-descktop" alt="...">
-                        <img src="../images/bannn mob 2.png" class="d-block img-fluid banners-mobail" alt="...">
-                    </div>
-                    <!-- <div class="carousel-item">
-                        <img src="../images/" class="d-block w-100" alt="...">
-                    </div> -->
+                <div class="item">
+                    <img src="../images/بنر ثاني 1.png" class="d-block img-fluid banners-descktop" alt="...">
+                    <img src="../images/bannn mob 2.png" class="d-block img-fluid banners-mobail" alt="...">
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
             </div>
         </section>
         <!-- category_2 -->
@@ -377,39 +358,39 @@
             <div class="category_2 pt-2">
                 <div class="container text-center">
                     <div class="rows row-1 pb-1">
-                        <a href="" class="cate">
+                        <a href="category-page.html" class="cate">
                             <img src="../images/bracelets.png" alt="img">
-                            <h6 class="cate-title">أساور</h6>
+                            <h6 class="cate-title">Bracelets</h6>
                         </a>
 
-                        <a href="" class="cate">
+                        <a href="category-page.html" class="cate">
                             <img src="../images/earrings.png" alt="img">
-                            <h6 class="cate-title">أقراط</h6>
+                            <h6 class="cate-title">Earrings</h6>
                         </a>
 
-                        <a href="" class="cate">
+                        <a href="category-page.html" class="cate">
                             <img src="../images/Chains.png" alt="img">
                             <h6 class="cate-title">Chains</h6>
                         </a>
 
-                        <a href="" class="cate">
+                        <a href="category-page.html" class="cate">
                             <img src="../images/rings.png" alt="img">
                             <h6 class="cate-title">Rings</h6>
                         </a>
 
                     </div>
                     <div class="rows row-2 pt-1">
-                        <a href="" class="cate">
+                        <a href="category-page.html" class="cate">
                             <img src="../images/Sets.png" alt="img">
-                            <h6 class="cate-title">Rings</h6>
+                            <h6 class="cate-title">Sets</h6>
                         </a>
-                        <a href="" class="cate">
+                        <a href="category-page.html" class="cate">
                             <img src="../images/necles.png" alt="img">
-                            <h6 class="cate-title">Rings</h6>
+                            <h6 class="cate-title">Necklaces</h6>
                         </a>
-                        <a href="" class="cate">
+                        <a href="category-page.html" class="cate">
                             <img src="../images/Other Categories.png" alt="img">
-                            <h6 class="cate-title">Rings</h6>
+                            <h6 class="cate-title">Other Categories</h6>
                         </a>
                     </div>
                 </div>
@@ -425,8 +406,8 @@
                     </a>
                     <div class="product-footer" dir="rtl">
                         <div class="info">
-                            <h5 class="title">اسورة وring Diamonds </h5>
-                            <span class="price">292 ر.س</span>
+                            <h5 class="title">Bracelets Gold 18k </h5>
+                            <span class="price">292 SAR</span>
                         </div>
                         <div class="bag">
                             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
@@ -454,8 +435,8 @@
                     </a>
                     <div class="product-footer" dir="rtl">
                         <div class="info">
-                            <h5 class="title">اسورة وring Diamonds </h5>
-                            <span class="price">292 ر.س</span>
+                            <h5 class="title">Bracelets Gold 18k </h5>
+                            <span class="price">292 SAR</span>
                         </div>
                         <div class="bag">
                             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
@@ -483,8 +464,8 @@
                     </a>
                     <div class="product-footer" dir="rtl">
                         <div class="info">
-                            <h5 class="title">اسورة وring Diamonds </h5>
-                            <span class="price">292 ر.س</span>
+                            <h5 class="title">Bracelets Gold 18k </h5>
+                            <span class="price">292 SAR</span>
                         </div>
                         <div class="bag">
                             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
@@ -512,8 +493,8 @@
                     </a>
                     <div class="product-footer" dir="rtl">
                         <div class="info">
-                            <h5 class="title">اسورة وring Diamonds </h5>
-                            <span class="price">292 ر.س</span>
+                            <h5 class="title">Bracelets Gold 18k </h5>
+                            <span class="price">292 SAR</span>
                         </div>
                         <div class="bag">
                             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
@@ -541,8 +522,8 @@
                     </a>
                     <div class="product-footer" dir="rtl">
                         <div class="info">
-                            <h5 class="title">اسورة وring Diamonds </h5>
-                            <span class="price">292 ر.س</span>
+                            <h5 class="title">Bracelets Gold 18k </h5>
+                            <span class="price">292 SAR</span>
                         </div>
                         <div class="bag">
                             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
@@ -570,8 +551,8 @@
                     </a>
                     <div class="product-footer" dir="rtl">
                         <div class="info">
-                            <h5 class="title">اسورة وring Diamonds </h5>
-                            <span class="price">292 ر.س</span>
+                            <h5 class="title">Bracelets Gold 18k </h5>
+                            <span class="price">292 SAR</span>
                         </div>
                         <div class="bag">
                             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
@@ -599,8 +580,8 @@
                     </a>
                     <div class="product-footer" dir="rtl">
                         <div class="info">
-                            <h5 class="title">اسورة وring Diamonds </h5>
-                            <span class="price">292 ر.س</span>
+                            <h5 class="title">Bracelets Gold 18k </h5>
+                            <span class="price">292 SAR</span>
                         </div>
                         <div class="bag">
                             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
@@ -627,8 +608,8 @@
                     </a>
                     <div class="product-footer" dir="rtl">
                         <div class="info">
-                            <h5 class="title">اسورة وring Diamonds </h5>
-                            <span class="price">292 ر.س</span>
+                            <h5 class="title">Bracelets Gold 18k </h5>
+                            <span class="price">292 SAR</span>
                         </div>
                         <div class="bag">
                             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
@@ -694,9 +675,15 @@
 
     <script src="../js/all.min.js"></script>
     <script src="../js/bootstrap.bundle.min.js"></script>
+    <!-- jquery script -->
     <script src="https://code.jquery.com/jquery-3.6.1.js"
         integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="../build/js/intlTelInput.js"></script>
+    <!-- owl main script -->
+    <script src="../OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+
+    <!-- owl script -->
+    <script src="../js/owlCarousel.js"></script>
     <script src="../js/main.js"></script>
 </body>
 
