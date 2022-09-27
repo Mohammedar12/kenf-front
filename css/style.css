@@ -581,13 +581,19 @@ input {
   width: 30px !important;
   height: 4px !important;
   margin: 0px 4px !important;
-  background-color: var(--sec-color) !important ;
+  background-color: var(--main-color) !important ;
   display: block;
-  transition: opacity 0.2s ease;
+  opacity: .3;
+  transition: opacity 0.5s ease;
   border-radius: 30px;
+  -webkit-transition: opacity 0.5s ease;
+  -moz-transition: opacity 0.5s ease;
+  -ms-transition: opacity 0.5s ease;
+  -o-transition: opacity 0.5s ease;
 }
 .owl-dots .owl-dot.active span {
   background-color: var(--main-color) !important ;
+  opacity: 1;
 }
 
 .banners .owl-nav {
