@@ -1206,6 +1206,7 @@ input {
   display: flex;
   flex-direction: column;
   padding: 10px 15px;
+  box-shadow: var(--main-shadow);
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -1219,7 +1220,8 @@ input {
 }
 
 .products .product:hover {
-  box-shadow: var(--main-shadow);
+
+  box-shadow: 0 0 10px 2px #0d26400f;
 }
 
 .products .product .img-box {
