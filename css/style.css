@@ -583,7 +583,7 @@ input {
   margin: 0px 4px !important;
   background-color: var(--main-color) !important ;
   display: block;
-  opacity: .3;
+  opacity: 0.3;
   transition: opacity 0.5s ease;
   border-radius: 30px;
   -webkit-transition: opacity 0.5s ease;
@@ -1207,6 +1207,10 @@ input {
   flex-direction: column;
   padding: 10px 15px;
   box-shadow: var(--main-shadow);
+  -webkit-box-shadow: var(--main-shadow);
+  -moz-box-shadow: var(--main-shadow);
+  -ms-box-shadow: var(--main-shadow);
+  -o-box-shadow: var(--main-shadow);
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -1220,8 +1224,11 @@ input {
 }
 
 .products .product:hover {
-
   box-shadow: 0 0 10px 2px #0d26400f;
+  -webkit-box-shadow: 0 0 10px 2px #0d26400f;
+  -moz-box-shadow: 0 0 10px 2px #0d26400f;
+  -ms-box-shadow: 0 0 10px 2px #0d26400f;
+  -o-box-shadow: 0 0 10px 2px #0d26400f;
 }
 
 .products .product .img-box {
@@ -2050,8 +2057,8 @@ input {
   width: 100%;
 }
 
-.bag .bag-product .info .option .size span{
-  margin: 0 20px 0 ;
+.bag .bag-product .info .option .size span {
+  margin: 0 20px 0;
   font-size: 13px;
   padding: 1px 25px;
   font-weight: bold;
