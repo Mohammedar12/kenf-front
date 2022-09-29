@@ -3259,10 +3259,15 @@ footer .contact-us ul .media {
 
 .billing-info .payments .inputs input {
   border: 0;
+  border-radius: 0 !important;
   border-bottom: 1px solid;
   outline: 0;
   padding: 3px 6px;
   font-size: 15px;
+  -webkit-border-radius: 0 !important;
+  -moz-border-radius: 0 !important;
+  -ms-border-radius: 0 !important;
+  -o-border-radius: 0 !important;
 }
 
 .billing-info .payments .inputs input:nth-child(1) {
