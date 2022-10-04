@@ -350,17 +350,23 @@
                                 <div class="accordion-body">
                                     <form action="" class="Ticket_form ">
                                         <div class="inputs" dir="rtl">
+                                            <input type="text" placeholder="Ticket Title">
                                             <input type="text" placeholder="Your Name">
-                                            <input type="text" placeholder="Email | Phone Number">
+                                            <input type="email" placeholder="Email">
                                             <textarea name="" id="" rows="10" placeholder="The Complaint"></textarea>
                                         </div>
-                                        <div class="upload">
-                                            <input type="file" id="file">
-                                            <label for="file"
-                                                class="upload_btn d-flex flex-column align-items-center gap-3">
-                                                <img src="../images/upload_photo.png" alt="" width="80px">
-                                                Upload Photo For Problem
-                                            </label>
+                                        <div class="form-footer">
+                                            <div class="upload">
+                                                <input type="file" id="file">
+                                                <label for="file"
+                                                    class="upload_btn d-flex flex-column align-items-center gap-3">
+                                                    <img src="../images/upload_photo.png" alt="" width="80px">
+                                                    <span>Upload Photo For Problem</span>
+                                                </label>
+                                            </div>
+                                            <div class="submit">
+                                                <input type="submit" value="Send Ticket">
+                                            </div>
                                         </div>
                                     </form>
                                 </div>
@@ -380,14 +386,47 @@
                                     Tickets Under Review
                                 </button>
                             </h2>
-                            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse "
+                            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
                                 aria-labelledby="panelsStayOpen-headingOne">
                                 <div class="accordion-body ">
                                     <ul class="tickets-list">
-                                        <li class="ticket">ticket No. 2#</li>
-                                        <li class="ticket">ticket No. 3#</li>
-                                        <li class="ticket">ticket No. 4#</li>
+                                        <li class="ticket" id="review">Ticket Title 2#</li>
+                                        <li class="ticket" id="review">Ticket Title 3#</li>
+                                        <li class="ticket" id="review">Ticket Title 4#</li>
                                     </ul>
+                                    <div class="ticket-review">
+                                        <div class="ticket-modal" tabindex="-1">
+                                            <div class="ticket-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title">Ticket title</h5>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <form action="" class="Ticket_form ">
+                                                            <div class="inputs" dir="rtl">
+                                                                <input type="text" placeholder="Your Name" disabled
+                                                                    value="Ahmed Khalid">
+                                                                <input type="email" placeholder="Email" disabled
+                                                                    value="ahmed@gmail.com">
+                                                                <textarea name="" id="" rows="4"
+                                                                    placeholder="The Complaint"
+                                                                    disabled> i cant buy from the stor</textarea>
+                                                            </div>
+                                                            <div class="uploaded-img text-center rounded-2">
+                                                                <img class="img-fluid rounded-2"
+                                                                    src="https://developers.google.com/static/maps/documentation/maps-static/images/error-image-signature.png"
+                                                                    alt="">
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                    <div class="modal-footer justify-content-center">
+                                                        <button type="button" class="btn btn-dark"
+                                                            id="close-review">Close</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -403,8 +442,26 @@
                                 aria-labelledby="panelsStayOpen-headingTwo">
                                 <div class="accordion-body">
                                     <ul class="tickets-list">
-                                        <li class="ticket answered">ticket No. 1#</li>
+                                        <li class="ticket answered" id="answered">Ticket Title 1#</li>
                                     </ul>
+                                    <div class="ticket-answered">
+                                        <div class="ticket-modal" tabindex="-1">
+                                            <div class="ticket-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header justify-content-center">
+                                                        <h5 class="modal-title ">Ticket title</h5>
+                                                    </div>
+                                                    <div class="modal-body text-center">
+                                                        <p>We Have Answered You On Your Email</p>
+                                                    </div>
+                                                    <div class="modal-footer justify-content-center">
+                                                        <button type="button" class="btn btn-dark"
+                                                            id="close-answered">Close</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -413,7 +470,7 @@
             </div>
         </div>
     </section>
-
+    <div class="back-drop"></div>
     <footer>
         <div class="top_footer container">
             <div class="logo-footer">
