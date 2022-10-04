@@ -87,7 +87,7 @@ window.intlTelInput(input, {
   utilsScript: "../../build/js/utils.js", // just for formatting/placeholders etc
 });
 
-// cetering the kenf collection
+// centering the kenf collection
 
 window.addEventListener("load", () => {
   let scrollElement = document.querySelector(".scroll-bar-center");
@@ -95,4 +95,73 @@ window.addEventListener("load", () => {
     (scrollElement.scrollWidth - scrollElement.clientWidth) / 2;
 });
 
+// change input upload photo to the uploaded photo
 
+let inputUpload = document.querySelector(".Ticket_form .upload #file");
+let labelPhoto = document.querySelector(".Ticket_form .upload img");
+let spanlInput = document.querySelector(".Ticket_form .upload span");
+
+inputUpload.addEventListener("change", function () {
+  const file = this.files[0];
+  if (file) {
+    const reader = new FileReader();
+    reader.addEventListener("load", () => {
+      const result = reader.result;
+      labelPhoto.src = result;
+    });
+    reader.readAsDataURL(file);
+  }
+  spanlInput.textContent = "change image";
+});
+
+// review tickets
+
+let review = document.querySelectorAll("#review");
+let ticketReview = document.querySelector(".ticket-review .ticket-modal");
+let backDrop = document.querySelector(".back-drop");
+let closeReview = document.querySelector(".ticket-review #close-review");
+
+// review.addEventListener("click", () => {
+//   console.log("d");
+//   ticketReview.style.display = "block";
+// });
+
+review.forEach((ticket) => {
+  ticket.addEventListener("click", () => {
+    ticketReview.style.display = "block";
+    backDrop.style.display = "block";
+    scrollTo(top);
+  });
+});
+
+backDrop.addEventListener("click", () => {
+  ticketReview.style.display = "none";
+  backDrop.style.display = "none";
+});
+
+closeReview.addEventListener("click", () => {
+  ticketReview.style.display = "none";
+  backDrop.style.display = "none";
+});
+
+let answered = document.querySelectorAll("#answered");
+let ticketAnswered = document.querySelector(".ticket-answered .ticket-modal");
+let closeAnswered = document.querySelector(".ticket-answered #close-answered");
+
+answered.forEach((ticket) => {
+  ticket.addEventListener("click", () => {
+    ticketAnswered.style.display = "block";
+    backDrop.style.display = "block";
+    scrollTo(top);
+  });
+});
+
+backDrop.addEventListener("click", () => {
+  ticketAnswered.style.display = "none";
+  backDrop.style.display = "none";
+});
+
+closeAnswered.addEventListener("click", () => {
+  ticketAnswered.style.display = "none";
+  backDrop.style.display = "none";
+});

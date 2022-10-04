@@ -49,7 +49,7 @@
                                         <li><button onclick="restAll()" type="button" class="btn shadow-none p-0"
                                                 data-bs-toggle="modal" data-bs-target="#staticBackdrop">Login</button>
                                         </li>
-                                        <li><a href="profile.html">My profile</a></li>
+                                        <li><a href="">My profile</a></li>
                                         <li><a href="orders.html">My orders</a></li>
                                         <li><a href="">Logout</a></li>
                                     </ul>
@@ -327,150 +327,63 @@
         </div>
     </nav>
 
-    <section class="complaints">
-        <header class="text-center mt-5 mb-5">
-            <h3 class="mb-4">Make A Complaint</h3>
-            <p class="pe-4 ps-4">ستتم معالجة الشكوى خلال 48 ساعة وسيتم التواصل معكم عبر الايميل او رقم الجوال في حال
-                معالجتها </p>
-        </header>
-        <div class="container d-flex w-100" dir="rtl">
-            <div class="content_one w-100 ">
-                <div class="content">
-                    <div class="accordion" id="accordionFlushExample1">
-                        <div class="accordion-item ">
-                            <h2 class="accordion-header" id="flush-ticketOne">
-                                <button class="accordion-button " type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#flush-collapseTicketOne" aria-expanded="false"
-                                    aria-controls="flush-collapseTicketOne">
-                                    New Tickit
-                                </button>
-                            </h2>
-                            <div id="flush-collapseTicketOne" class="accordion-collapse collapse show"
-                                aria-labelledby="flush-ticketOne" data-bs-parent="#accordionFlushExample1">
-                                <div class="accordion-body">
-                                    <form action="" class="Ticket_form ">
-                                        <div class="inputs" dir="rtl">
-                                            <input type="text" placeholder="Ticket Title">
-                                            <input type="text" placeholder="Your Name">
-                                            <input type="email" placeholder="Email">
-                                            <textarea name="" id="" rows="10" placeholder="The Complaint"></textarea>
-                                        </div>
-                                        <div class="form-footer">
-                                            <div class="upload">
-                                                <input type="file" id="file">
-                                                <label for="file"
-                                                    class="upload_btn d-flex flex-column align-items-center gap-3">
-                                                    <img src="../images/upload_photo.png" alt="" width="80px">
-                                                    <span>Upload Photo For Problem</span>
-                                                </label>
-                                            </div>
-                                            <div class="submit">
-                                                <input type="submit" value="Send Ticket">
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
+    <section class="profile">
+        <div class="page-title">My Profile</div>
+        <div class="container" dir="rtl">
+            <div class="content_one">
+                <div class="personal-info">
+                    <div class="title">Personal Info</div>
+                    <div class="box">
+                        <div class="field">
+                            <input type="text" required>
+                            <label for="">Full Name</label>
+                        </div>
+                        <div class="field">
+                            <input type="text" required>
+                            <label for="">Phone number</label>
+                        </div>
+
+                    </div>
+                    <div class="box">
+                        <div class="field">
+                            <input type="email" required>
+                            <label for="">Email</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="billing-info">
+                    <div class="payments" dir="rtl">
+                        <div class="title">Payment Method</div>
+                        <div class="method credit-card">
+                            Mada Card / Credit Card
+                            <div class="inputs ">
+                                <input type="text" placeholder="card number">
+                                <input type="text" placeholder="MM/YY">
+                                <input type="text" placeholder="CVV">
+                                <!-- if the card was visa the img will show visa -->
+                                <!-- <img src="../images/vis.png" alt="" > -->
                             </div>
+                        </div>
+                        <div class="method apple-pay">
+                            apple pay
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="content_two w-100">
-                <div class="content">
-                    <div class="accordion" id="accordionFlushExample2">
-                        <div class="accordion-item ">
-                            <h2 class="accordion-header" id="panelsStayOpen-headingOne">
-                                <button class="accordion-button " type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
-                                    aria-controls="panelsStayOpen-collapseOne">
-                                    Tickets Under Review
-                                </button>
-                            </h2>
-                            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
-                                aria-labelledby="panelsStayOpen-headingOne">
-                                <div class="accordion-body ">
-                                    <ul class="tickets-list">
-                                        <li class="ticket" id="review">Ticket Title 2#</li>
-                                        <li class="ticket" id="review">Ticket Title 3#</li>
-                                        <li class="ticket" id="review">Ticket Title 4#</li>
-                                    </ul>
-                                    <div class="ticket-review">
-                                        <div class="ticket-modal" tabindex="-1">
-                                            <div class="ticket-dialog">
-                                                <div class="modal-content">
-                                                    <div class="modal-header">
-                                                        <h5 class="modal-title">Ticket title</h5>
-                                                    </div>
-                                                    <div class="modal-body">
-                                                        <form action="" class="Ticket_form ">
-                                                            <div class="inputs" dir="rtl">
-                                                                <input type="text" placeholder="Your Name" disabled
-                                                                    value="Ahmed Khalid">
-                                                                <input type="email" placeholder="Email" disabled
-                                                                    value="ahmed@gmail.com">
-                                                                <textarea name="" id="" rows="4"
-                                                                    placeholder="The Complaint"
-                                                                    disabled> i cant buy from the stor</textarea>
-                                                            </div>
-                                                            <div class="uploaded-img text-center rounded-2">
-                                                                <img class="img-fluid rounded-2"
-                                                                    src="https://developers.google.com/static/maps/documentation/maps-static/images/error-image-signature.png"
-                                                                    alt="">
-                                                            </div>
-                                                        </form>
-                                                    </div>
-                                                    <div class="modal-footer justify-content-center">
-                                                        <button type="button" class="btn btn-dark"
-                                                            id="close-review">Close</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="true"
-                                    aria-controls="panelsStayOpen-collapseTwo">
-                                    Tickets Answered
-                                </button>
-                            </h2>
-                            <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
-                                aria-labelledby="panelsStayOpen-headingTwo">
-                                <div class="accordion-body">
-                                    <ul class="tickets-list">
-                                        <li class="ticket answered" id="answered">Ticket Title 1#</li>
-                                    </ul>
-                                    <div class="ticket-answered">
-                                        <div class="ticket-modal" tabindex="-1">
-                                            <div class="ticket-dialog">
-                                                <div class="modal-content">
-                                                    <div class="modal-header justify-content-center">
-                                                        <h5 class="modal-title ">Ticket title</h5>
-                                                    </div>
-                                                    <div class="modal-body text-center">
-                                                        <p>We Have Answered You On Your Email</p>
-                                                    </div>
-                                                    <div class="modal-footer justify-content-center">
-                                                        <button type="button" class="btn btn-dark"
-                                                            id="close-answered">Close</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+            <div class="content_two">
+                <div class="address-info ">
+                    <div class="title">Add Address</div>
+                    <div class="address text-center">
+                        <div class="google-map mt-5 mb-5">
+                            Here will show a google-map to select the correct locaition
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <button class="save-data">Save</button>
     </section>
-    <div class="back-drop"></div>
+
     <footer>
         <div class="top_footer container">
             <div class="logo-footer">
@@ -533,6 +446,7 @@
             </div>
         </div>
     </footer>
+
     <!-- icon script -->
     <script src="../js/all.min.js"></script>
 

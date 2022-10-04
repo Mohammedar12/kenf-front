@@ -1514,6 +1514,45 @@ input {
   gap: 25px;
 }
 
+.product-section .product-imgs .main-img {
+  position: relative;
+}
+
+.product-section .product-imgs .main-img .add-favorite {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--sec-color);
+  color: #1f4369;
+  font-size: 17px !important;
+  transition: var(--transition);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+}
+
+.product-section .product-imgs .main-img .add-favorite:hover {
+  background-color: #1f4369;
+  color: var(--sec-color);
+  font-size: 14px !important;
+  transform: scale(1.3);
+  -webkit-transform: scale(1.3);
+  -moz-transform: scale(1.3);
+  -ms-transform: scale(1.3);
+  -o-transform: scale(1.3);
+}
+
 @media (max-width: 998px) {
   .product-section .container {
     flex-direction: column;
@@ -2984,8 +3023,8 @@ footer .contact-us ul .media {
   gap: 20px;
 }
 
-.complaints .content_one input,
-.complaints .content_one textarea {
+.complaints .Ticket_form input,
+.complaints .Ticket_form textarea {
   padding: 6px 10px;
   outline: none;
   resize: none;
@@ -2998,16 +3037,92 @@ footer .contact-us ul .media {
   -o-border-radius: 8px;
 }
 
-.complaints .content_one textarea {
+.complaints .Ticket_form textarea {
   max-height: 150px;
 }
 
-.complaints .content_one .inputs,
+.complaints .Ticket_form .inputs,
 .complaints .content_one .upload,
-.complaints .content_one .Ticket_form {
+.complaints .Ticket_form {
   display: flex;
   flex-direction: column;
   gap: 15px;
+}
+
+.ticket-modal {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0px;
+  z-index: 100;
+  display: none;
+}
+
+.ticket-modal .ticket-dialog {
+  display: flex;
+  width: 50%;
+  min-width: 300px;
+  margin: 2rem auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+  align-items: center;
+}
+
+.ticket-modal .modal-title {
+  color: var(--main-color);
+}
+
+.ticket-modal .btn {
+  background-color: transparent;
+  color: var(--main-color);
+  border: 2px solid rgba(31, 67, 105, 0.5);
+  box-shadow: 0 0 5px 0px rgb(31 67 105 / 18%);
+  transition: var(--transition);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+}
+
+.ticket-modal .btn:hover{
+  background-color: var(--main-color);
+  color: #fff;
+}
+
+.back-drop {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  opacity: 0.5;
+  background-color: #000;
+  z-index: 90;
+  display: none;
+}
+
+.complaints .content_one .form-footer {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.complaints .content_one input[type="submit"] {
+  background-color: transparent;
+  transition: var(--transition);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+}
+
+.complaints .content_one input[type="submit"]:hover {
+  background-color: var(--main-color);
+  color: #fff;
+  border-color: #fff;
 }
 
 .complaints .content_one input[type="file"] {
@@ -3076,6 +3191,7 @@ footer .contact-us ul .media {
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
+  cursor:pointer;
 }
 
 .complaints .tickets-list .ticket.answered {
@@ -3166,7 +3282,7 @@ footer .contact-us ul .media {
 .profile .personal-info {
   flex-direction: column;
   margin-top: 20px;
-  padding-bottom: 20px  !important;
+  padding-bottom: 20px !important;
 }
 
 .profile .title {
@@ -3305,11 +3421,9 @@ footer .contact-us ul .media {
   .profile .container .content_two {
     width: 100%;
   }
-
 }
 
 @media (max-width: 570px) {
-
   .profile .box {
     flex-direction: column;
   }
@@ -3330,7 +3444,6 @@ footer .contact-us ul .media {
 }
 
 @media (max-width: 350px) {
-
   .profile .payments .inputs input {
     font-size: 13px;
   }
