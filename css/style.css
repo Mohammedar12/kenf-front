@@ -3069,6 +3069,12 @@ footer .contact-us ul .media {
   align-items: center;
 }
 
+@media (max-width : 767px) {
+  .ticket-modal .ticket-dialog {
+      width: 90%;
+  }
+}
+
 .ticket-modal .modal-title {
   color: var(--main-color);
 }
@@ -3112,6 +3118,7 @@ footer .contact-us ul .media {
 
 .complaints .content_one input[type="submit"] {
   background-color: transparent;
+  color: #1f4369 !important;
   transition: var(--transition);
   -webkit-transition: var(--transition);
   -moz-transition: var(--transition);
