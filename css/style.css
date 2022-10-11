@@ -608,7 +608,7 @@ input {
 .banners .owl-nav .owl-next {
   position: absolute;
   outline: none;
-  background-color: #21252971 !important;
+  background-color: transparent !important;
   transition: var(--transition);
   -webkit-transition: var(--transition);
   -moz-transition: var(--transition);
@@ -639,6 +639,7 @@ input {
 }
 
 @media (max-width: 700px) {
+  
   .banners-descktop {
     display: none !important;
   }
@@ -855,11 +856,11 @@ input {
 
 .exclusive img {
   width: 100%;
-  border-radius: inherit !important;
-  -webkit-border-radius: inherit !important;
-  -moz-border-radius: inherit !important;
-  -ms-border-radius: inherit !important;
-  -o-border-radius: inherit !important;
+  border-radius: 6px !important;
+  -webkit-border-radius: 6px !important;
+  -moz-border-radius: 6px !important;
+  -ms-border-radius: 6px !important;
+  -o-border-radius: 6px !important;
 }
 
 .exclusive .slide .content {
@@ -944,7 +945,7 @@ input {
 
 /* will active this later */
 
-/* .chart-mob .carousel-inner img {
+.chart-mob .carousel-inner img {
   width: 300px;
   margin: auto;
 }
@@ -988,7 +989,7 @@ input {
   .charts-desk img {
     width: 360px !important;
   }
-} */
+}
 
 /* kenf */
 
@@ -3454,7 +3455,6 @@ footer .contact-us ul .media {
   .profile .payments .inputs input {
     font-size: 13px;
   }
-
   .profile .payments .inputs input:nth-child(1) {
     width: 43%;
   }
