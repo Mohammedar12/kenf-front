@@ -282,7 +282,7 @@ input {
   display: block !important;
 }
 
-.login-modal .show-this-flex {
+.show-this-flex {
   display: flex !important;
 }
 
@@ -2626,7 +2626,7 @@ input {
   width: 30%;
 }
 
-.checkout .shipping-list {
+.checkout .shipping-company {
   padding: 15px 20px;
   background-position: left 0.75rem center !important;
   box-shadow: 0px 0px 10px 0px rgba(237, 221, 198, 0.5);
@@ -2637,6 +2637,40 @@ input {
   -ms-border-radius: 10px !important;
   -o-border-radius: 10px !important;
 }
+
+.checkout .shipping-company .company {
+  position: relative;
+  font-size: 14px;
+}
+
+.checkout .shipping-company .company::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width:  0;
+  height: 4px;
+  border-radius: 10px;
+  background-color: #1f4369;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  transition: var(--transition);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+}
+
+.checkout .shipping-company .company:hover::after {
+  width:  calc(100% + 10px);
+}
+
+.checkout .shipping-company .company input {
+  accent-color: var(--main-color);
+}
+
 
 .checkout .checkout-info .costs {
   display: flex;
@@ -2792,27 +2826,94 @@ input:-webkit-autofill:active {
   margin-bottom: 30px;
 }
 
+.checkout-details .payments .payment_methods { 
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 .checkout-details .payments .method {
   display: flex;
   flex-direction: column;
   gap: 10px;
   margin-bottom: 20px;
+  width:100%;
+  /* flex: 1; */
+}
+
+.checkout-details .payments .method button {
+  border-radius: 1rem;
+  padding: 7px;
+  background-color: #e7cda5;
+  border: 0;
+  color: #000;
+  max-height: 52px;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+  transition: var(--transition);
+  height: 48px;
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+}
+
+.checkout-details .payments .method button:focus {
+  box-shadow: 0 0 10px 0 #1f43695b;
+}
+
+.checkout-details .payments .mada-card button {
+  height: 48px;
+}
+
+.checkout-details .payments .mada-card button svg {
+  fill: #000;
+}
+
+.checkout-details .payments .apple-pay button {
+  background-color: #000;
+  color: #fff;
+}
+
+.cards_inputs {
+  height: 0;
+  overflow: hidden;
 }
 
 .checkout-details .payments .inputs {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  gap: 0.5rem;
+  justify-content: center;
+  transform: translateY(15px);
+  -webkit-transform: translateY(15px);
+  -moz-transform: translateY(15px);
+  -ms-transform: translateY(15px);
+  -o-transform: translateY(15px);
 }
 
 .checkout-details .payments .inputs input {
-  border: 0;
-  border-bottom: 1px solid;
-  outline: 0;
+  border: 2px solid #1f4369;
   padding: 3px 6px;
   font-size: 15px;
+  flex: 1;
+  border-radius: .4rem;
+  -webkit-border-radius: .4rem;
+  -moz-border-radius: .4rem;
+  -ms-border-radius: .4rem;
+  -o-border-radius: .4rem;
 }
 
-.checkout-details .payments .inputs input:nth-child(1) {
+.checkout-details .payments .inputs .box input {
+  width: 100%;
+}
+
+.show {
+  height: 100px;
+}
+
+/* .checkout-details .payments .inputs input:nth-child(1) {
   width: 40%;
 }
 .checkout-details .payments .inputs input:nth-child(2) {
@@ -2820,7 +2921,7 @@ input:-webkit-autofill:active {
 }
 .checkout-details .payments .inputs input:nth-child(3) {
   width: 21%;
-}
+} */
 
 @media (max-width: 997px) {
   .checkout .container {
@@ -2844,7 +2945,7 @@ input:-webkit-autofill:active {
     flex-direction: column;
   }
 
-  .checkout-details .address-info .box input {
+  /* .checkout-details .address-info .box input {
     width: 100%;
   }
   .checkout-details .payments .inputs input:nth-child(1) {
@@ -2855,15 +2956,27 @@ input:-webkit-autofill:active {
   }
   .checkout-details .payments .inputs input:nth-child(3) {
     width: 23%;
-  }
+  } */
 }
+
+/* .checkout-details .apple-pay {
+  background-color: #000;
+  color: #fff;
+  display: inline-block !important;
+  border-radius: 1rem;
+  padding: 10px;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+} */
 
 @media (max-width: 350px) {
   .checkout .checkout-info {
     font-size: 14px;
   }
 
-  .checkout-details .payments .inputs input {
+  /* .checkout-details .payments .inputs input {
     font-size: 13px;
   }
 
@@ -2875,7 +2988,7 @@ input:-webkit-autofill:active {
   }
   .checkout-details .payments .inputs input:nth-child(3) {
     width: 24%;
-  }
+  } */
 }
 
 /* footer */
