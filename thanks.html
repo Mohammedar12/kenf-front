@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- icons -->
+    <link rel="stylesheet" href="../css/all.min.css">
+
+    <!-- noralize -->
+    <link rel="stylesheet" href="../css/normalize.css">
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+
+    <!-- CSS Main -->
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Kenf</title>
+</head>
+
+<body>
+    <style>
+        body {
+            background-color: #f7f0eb;
+        }
+
+        .content {
+            color: #1f4369;
+            background-color: #fff;
+            box-shadow: -4px 4px 15px 0 #fffeff62;
+            padding: 50px 20px;
+            letter-spacing: 1.2px;
+            line-height: 1.8;
+        }
+
+        .order-number {
+            font-size: 20px;
+            color: #1f4369;
+        }
+
+        .order-number span {
+            color: #eba38d;
+        }
+
+        .thanks-msg {
+            position: relative;
+        }
+
+        .thanks-msg::after {
+            content: '';
+            position: absolute;
+            height: 3px;
+            width: 50%;
+            background-color: #1f4369;
+            bottom: 0;
+            border-radius: 10px;
+        }
+
+        .thanks-msg p {
+            color: #eba38d;
+        }
+
+        .note-msg span {
+            text-transform: uppercase;
+            font-weight: bold;
+            position: relative;
+            color: #000;
+        }
+
+        .note-msg span::after {
+            content: '';
+            position: absolute;
+            height: 3px;
+            width: 88%;
+            background-color: #000;
+            bottom: 0;
+            left: 0;
+            border-radius: 10px;
+        }
+
+        .buttons {
+            margin-top: 20px;
+        }
+
+        .buttons button {
+            background-color: #1f4369;
+            color: #f7f7f7;
+            border: 0;
+            outline: none;
+            padding: 10px 20px;
+            border-radius: 3px;
+            margin: 0 5px;
+        }
+
+        @media (max-width : 550px) {
+            .content {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width : 350px) {
+            .content {
+                font-size: 12px;
+            }
+
+            .order-number {
+                font-size: 16px;
+            }
+
+            .buttons {
+                margin-top: 10px;
+            }
+        }
+    </style>
+    <div class="container d-flex flex-column justify-content-center text-center" style="height:100vh;">
+        <div class="content d-flex flex-column gap-3 justify-content-center align-items-center">
+            <div class="thanks-msg d-flex flex-column align-items-center gap-2 text-center">
+                <i class="fa-regular fa-face-smile-beam fa-3x"></i>
+                <h1 class="fw-light">Thank You</h1>
+                <p>Thanks For Choosing Us , Enjoy Your Products ! <br> We Hope To See You Soon
+                    Here ;)</p>
+            </div>
+            <div class="order-number">
+                Your Order Number Is <span class="fw-bold">#231</span>
+            </div>
+            <div class="note-msg ">
+                <span>notes :</span> We Will Send A Message To You If Your Order Has Been Shipped
+            </div>
+            <!-- <div class="social">
+                <div class="social-title">Follow Us On Our Social Media</div>
+                <div class="social-media"></div>
+            </div> -->
+            <div class="buttons">
+                <button>MY ORDERS</button>
+                <button>HOME</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
