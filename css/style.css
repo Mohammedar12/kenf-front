@@ -761,6 +761,10 @@ input {
   margin: auto;
 }
 
+.exclusive .item h4 {
+  font-size: 14px !important;
+}
+
 @media (max-width: 1199px) {
   .exclusive .owl-item .item {
     width: 280px;
