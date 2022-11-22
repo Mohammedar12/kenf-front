@@ -741,7 +741,7 @@ input {
 }
 
 .exclusive .owl-carousel .owl-stage-outer {
-  height: 340px;
+  height: 390px;
 }
 
 .exclusive .owl-carousel .owl-stage {
@@ -773,7 +773,7 @@ input {
 
 @media (max-width: 998px) {
   .exclusive .owl-carousel .owl-stage-outer {
-    height: 260px;
+    height: 300px;
   }
 
   .exclusive .owl-item .item {
@@ -789,7 +789,7 @@ input {
 
 @media (max-width: 680px) {
   .exclusive .owl-carousel .owl-stage-outer {
-    height: 300px;
+    height: 340px;
   }
 
   .exclusive .owl-item .item {
@@ -799,7 +799,7 @@ input {
 
 @media (max-width: 550px) {
   .exclusive .owl-carousel .owl-stage-outer {
-    height: 250px;
+    height: 280px;
   }
 
   .exclusive .owl-item .item {
@@ -809,7 +809,7 @@ input {
 
 @media (max-width: 460px) {
   .exclusive .owl-carousel .owl-stage-outer {
-    height: 220px;
+    height: 250px;
   }
 
   .exclusive .owl-item .item {
@@ -829,7 +829,7 @@ input {
 
 @media (max-width: 412px) {
   .exclusive .owl-carousel .owl-stage-outer {
-    height: 200px;
+    height: 230px;
   }
 
   .exclusive .owl-item .item {
@@ -839,7 +839,7 @@ input {
 
 @media (max-width: 330px) {
   .exclusive .owl-carousel .owl-stage-outer {
-    height: 170px;
+    height: 200px;
   }
   .exclusive .owl-item .item {
     width: 140px;
@@ -860,11 +860,11 @@ input {
 
 .exclusive img {
   width: 100%;
-  border-radius: 6px !important;
-  -webkit-border-radius: 6px !important;
-  -moz-border-radius: 6px !important;
-  -ms-border-radius: 6px !important;
-  -o-border-radius: 6px !important;
+  border-radius: 6px 6px 0 0 !important;
+  -webkit-border-radius: 6px 6px 0 0 !important;
+  -moz-border-radius: 6px 6px 0 0 !important;
+  -ms-border-radius: 6px 6px 0 0 !important;
+  -o-border-radius: 6px 6px 0 0 !important;
 }
 
 .exclusive .slide .content {
@@ -878,13 +878,13 @@ input {
 
 .exclusive .slide .content .info {
   position: absolute;
-  bottom: 0px;
-  left: 50%;
-  transform: translateX(-50%);
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
+  /*bottom: 0px;
+  */left: 50%;
+  transform: translate(-50% , -0.5px);
+  -webkit-transform: translate(-50% , -0.5px);
+  -moz-transform: translate(-50% , -0.5px);
+  -ms-transform: translate(-50% , -0.5px);
+  -o-transform: translate(-50% , -0.5px);
   text-align: center;
   background-color: var(--sec-color-50);
   width: 100%;
