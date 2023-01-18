@@ -3,6 +3,7 @@ $(".banners-main").owlCarousel({
   margin: 10,
   nav: true,
   navSpeed: 800,
+  dots: false,
   dotsSpeed: 800,
   dragEndSpeed: 800,
   responsive: {
@@ -11,6 +12,19 @@ $(".banners-main").owlCarousel({
     },
   },
 });
+
+// var owl = $('.banners-main');
+
+// // Go to the next item
+// $('.customNextBtn').click(function() {
+//     owl.trigger('to.owl.carousel' , [2 , 300]);
+// })
+// Go to the previous item
+// $('.customPrevBtn').click(function() {
+//     // With optional speed parameter
+//     // Parameters has to be in square bracket '[]'
+//     owl.trigger('prev.owl.carousel', [2, 300]);
+// })
 
 $(".exclusive-carousel").owlCarousel({
   center: true,
@@ -67,3 +81,5 @@ $(".suggested-products").owlCarousel({
 // change nav icon for banners-main
 document.querySelector(".banners-main .owl-prev").innerHTML = `<i class="fa-solid fa-angle-left fa-2x"></i>`;
 document.querySelector(".banners-main .owl-next").innerHTML = `<i class="fa-solid fa-angle-right fa-2x"></i>`;
+
+
