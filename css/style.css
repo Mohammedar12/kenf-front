@@ -1074,6 +1074,7 @@ input {
 
 .kenf-collection .item img {
   max-width: 100%;
+  max-height: 300px;
 }
 
 /* category_2 */
@@ -3642,7 +3643,6 @@ footer .contact-us ul .media {
 }
 
 @media (min-width: 830px) {
-  
   .special_product {
     background: linear-gradient(
       190.44deg,
@@ -3696,7 +3696,6 @@ footer .contact-us ul .media {
   .special_product .title {
     font-weight: 800;
     font-size: 18px;
-    
   }
   .special_product .description {
     font-weight: 500;
@@ -3729,8 +3728,7 @@ footer .contact-us ul .media {
   }
 }
 
-@media (min-width : 1000px) {
-  
+@media (min-width: 1000px) {
   .special_product .special_product_card .product_info {
     /* margin: 10px auto; */
     display: flex;
@@ -3751,7 +3749,7 @@ footer .contact-us ul .media {
     line-height: 2.3;
     width: fit-content;
     max-width: 400px;
-    margin: 0px auto ;
+    margin: 0px auto;
   }
 
   .special_product .btns button {
@@ -3767,4 +3765,3 @@ footer .contact-us ul .media {
     -o-border-radius: 8px;
   }
 }
-
